@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+	 function ShowMeDetails(){
+      var countryName=document.getElementById("CountryName").value;
+      console.log(countryName)
+      if(countryName=="USA"){
+      	document.getElementById('Can1').style.visibility='hidden';
+     	document.getElementById('Can2').style.visibility='hidden';
+     	document.getElementById('Can3').style.visibility='hidden';
+     	document.getElementById('Can4').style.visibility='hidden';
+     	document.getElementById('Can5').style.visibility='hidden';
+     	document.getElementById('Can6').style.visibility='hidden';
+     	document.getElementById('Phil1').style.visibility='hidden';
+     	document.getElementById('Phil2').style.visibility='hidden';
+     	document.getElementById('Phil3').style.visibility='hidden';
+     	document.getElementById('Phil4').style.visibility='hidden';
+     	document.getElementById('Phil5').style.visibility='hidden';
+     	document.getElementById('Phil6').style.visibility='hidden';
+     	//visible
+     	document.getElementById('Us1').style.visibility='visible';
+     	document.getElementById('Us2').style.visibility='visible';
+     	document.getElementById('Us3').style.visibility='visible';
+     	document.getElementById('Us4').style.visibility='visible';
+     	document.getElementById('Us5').style.visibility='visible';
+     	document.getElementById('Us6').style.visibility='visible';
+     }
+     else if(countryName=="Canada"){
+      	document.getElementById('Us1').style.visibility='hidden';
+     	document.getElementById('Us2').style.visibility='hidden';
+     	document.getElementById('Us3').style.visibility='hidden';
+     	document.getElementById('Us4').style.visibility='hidden';
+     	document.getElementById('Us5').style.visibility='hidden';
+     	document.getElementById('Us6').style.visibility='hidden';
+     	document.getElementById('Phil1').style.visibility='hidden';
+     	document.getElementById('Phil2').style.visibility='hidden';
+     	document.getElementById('Phil3').style.visibility='hidden';
+     	document.getElementById('Phil4').style.visibility='hidden';
+     	document.getElementById('Phil5').style.visibility='hidden';
+     	document.getElementById('Phil6').style.visibility='hidden';
+     	//visible
+     	document.getElementById('Can1').style.visibility='visible';
+     	document.getElementById('Can2').style.visibility='visible';
+     	document.getElementById('Can3').style.visibility='visible';
+     	document.getElementById('Can4').style.visibility='visible';
+     	document.getElementById('Can5').style.visibility='visible';
+     	document.getElementById('Can6').style.visibility='visible';
+     }
+     else if(countryName=="Philippines"){
+      	document.getElementById('Us1').style.visibility='hidden';
+     	document.getElementById('Us2').style.visibility='hidden';
+     	document.getElementById('Us3').style.visibility='hidden';
+     	document.getElementById('Us4').style.visibility='hidden';
+     	document.getElementById('Us5').style.visibility='hidden';
+     	document.getElementById('Us6').style.visibility='hidden';
+     	document.getElementById('Can1').style.visibility='hidden';
+     	document.getElementById('Can2').style.visibility='hidden';
+     	document.getElementById('Can3').style.visibility='hidden';
+     	document.getElementById('Can4').style.visibility='hidden';
+     	document.getElementById('Can5').style.visibility='hidden';
+     	document.getElementById('Can6').style.visibility='hidden';
+     		//visible
+     	document.getElementById('Phil1').style.visibility='visible';
+     	document.getElementById('Phil2').style.visibility='visible';
+     	document.getElementById('Phil3').style.visibility='visible';
+     	document.getElementById('Phil4').style.visibility='visible';
+     	document.getElementById('Phil5').style.visibility='visible';
+     	document.getElementById('Phil6').style.visibility='visible';
+
+     }
+
+  }
+
+</script>
+</head>
+<body>
+	<div class="container-fluid"style="">
+		<div class="row">
+			<div class="col-md-3">Country
+			</div>
+			<div class="col-md-3">Province
+			</div>
+			<div class="col-md-3">Area
+			</div>
+			<div class="col-md-3">City
+			</div>
+		</div>
+		<div class="col-md-3">
+			<select id="CountryName" onchange="ShowMeDetails()"style="height: 34px;width: 250px;">
+			    <option value="Select One" selected="selected">--Select Country--</option>
+			    <option value="Canada">Canada</option>
+			    <option value="USA">USA</option>
+			    <option value="Philippines">Philippines</option>
+		    </select>
+		</div>
+		<div class="col-md-3">
+			<select id="txtProvince--" name="subject" id="subject"style="height: 34px;width: 250px;">
+			    <option value="Select One" selected="selected">--Select Province--</option>
+			    <option id="Can1"value="Canada">CA-Alberta</option>
+			    <option id="Can2"value="Canada">CA-Ontario</option>
+			    <option id="Us1"value="USA">US-Washington</option>
+			    <option id="Us2" value="USA">US-Alabama</option>
+			    <option id="Phil1"value="USA">Philippines-Pampanga</option>
+			    <option id="Phil2" value="USA">Philippines-Bulacan</option>
+		    </select>
+		</div>
+		<div class="col-md-3">
+			<select id="txtArea" name="subject" id="subject"style="height: 34px;width: 250px;">
+			    <option value="Select One" selected="selected">--Select Area--</option>
+			    <option id="Can3"value="Canada">CA-Alberta-East</option>
+			    <option id="Can4"value="Canada">CA-Ontario-West</option>
+			    <option id="Us3"value="USA">US-Washington-East</option>
+			    <option id="Us4"value="USA">US-Alabama-West</option>
+			    <option id="Phil3"value="USA">Philippines-Pampanga-East</option>
+			    <option id="Phil4" value="USA">Philippines-Bulacan-West</option>
+		    </select>
+		</div>
+		<div class="col-md-3">
+			<select id="txtcity" name="subject" id="subject"style="height: 34px;width: 250px;">
+			    <option value="Select One" selected="selected">--Select City--</option>
+			    <option id="Can5"value="Canada">CA-Alberta-East-Edmonton</option>
+			    <option id="Can6"value="Canada">CA-Alberta-West-Regina</option>
+			 	<option id="Us5"value="USA">US-Washington-East-Redmond</option>
+			    <option id="Us6"value="USA">US-Alabama-West-Florence</option>
+			    <option id="Phil5"value="USA">Philippines-Pampanga-East-Apalit</option>
+			    <option id="Phil6" value="USA">Philippines-Bulacan-West-Malolos</option>
+		    </select>
+		</div>
+
+	</div>
+</body>
+</html>
