@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+	<title></title>
+	<style type="text/css">
+
+	</style>
+	<script>
+		function fncValidate(){
+			var Age=document.getElementById("txtAge").value;
+			
+			console.log(Age);
+			if(Age <=15){
+				alert("nemer");
+				document.getElementById("divErrorAge").style.display="block";
+				document.getElementById("txtAge").focus();
+				return false;
+			}
+			
+				if(Age>=15 && Age<=18){
+				console.log(Age);
+				document.getElementById("divErrorAge2").style.display="block";
+				alert("castro")	;
+			}
+				else if (Age >=23 && Age<=29){
+				console.log(Age);
+				document.getElementById("divErrorAge3").style.display="block";
+				alert("canada");
+			}
+				if (Age ==65){
+				console.log(Age);
+				document.getElementById("divErrorAge4").style.display="block";
+				alert("Philippines");
+			}
+				else if(Age ==70){
+				console.log(Age);
+				document.getElementById("divErrorAge5").style.display="block";
+				alert("World Tour");
+			}
+						
+			}
+
+
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2"style="color:;font-size:16px;"><b>Age</b>
+			</div>
+			<div class="col-md-2"><input maxlength="2"tabindex="1"id="txtAge" type="text" class="form-control" placeholder="Age">
+			</div>
+			<div class="row">
+				<div class="col-md-2"><label id="divErrorAge" style="display: none; color:red;font-size: 10px;font-style: italic;">You can have not Sin</label>
+				</div>			
+			</div>
+			<div class="row">
+				<div class="col-md-2"><label id="divErrorAge2" style="display: none; color:red;font-size: 10px;font-style: italic;">You can have  Sin</label>
+				</div>			
+			</div>
+			<div class="row">
+				<div class="col-md-2"><label id="divErrorAge3" style="display: none; color:red;font-size: 10px;font-style: italic;">Change Your Sin Number</label>
+				</div>			
+			</div>
+			<div class="row">
+				<div class="col-md-2"><label id="divErrorAge4" style="display: none; color:red;font-size: 10px;font-style: italic;">Time to Retire</label>
+				</div>			
+			</div>
+			<div class="row">
+				<div class="col-md-2"><label id="divErrorAge5" style="display: none; color:red;font-size: 10px;font-style: italic;">Take Break and Enjoy Life</label>
+				</div>			
+			</div>
+			<div class="col-md-2"><button onclick="fncValidate();">Submit</button>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

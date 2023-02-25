@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="">
+ <title></title>
+<script>
+   function changelang(languange) {
+      console.log(languange);
+
+      if (languange=="ENG") {
+         document.getElementById("lblfirstName").innerHTML="First Name";
+          document.getElementById("lbllastName").innerHTML="Last Name";
+      }
+      // french
+      else{
+          document.getElementById("lblfirstName").innerHTML="Prénom";
+          document.getElementById("lbllastName").innerHTML="Nom de famille";
+      }
+   }
+
+
+      function loadit(){
+         document.getElementById("lblfirstName").innerHTML="First Name";
+          document.getElementById("lbllastName").innerHTML="Last Name";
+
+      }
+
+</script>
+</head>
+<body onload="loadit()">
+   <button value="ENG" onclick="changelang(this.value)">English</button>
+   <button value="FR" onclick="changelang(this.value)">French</button>   
+   
+   <br>
+   <br>
+   <label id="lblfirstName"></label>
+   <input type="text" id="Q1">
+
+   <br>
+   <br>
+
+   <label id="lbllastName"></label>
+   <input type="text" id="Q2">
+
+</body>
+</html>

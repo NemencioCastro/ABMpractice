@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+	<title></title>
+	<script>
+
+		//change color to next//
+
+		function fncinput1(){
+			document.getElementById("FirstDiv").style.background="blue";
+		}
+		function fncinput2(){
+			document.getElementById("SecondDiv").style.background="gray";
+		}
+		function fncinput3(){
+			document.getElementById("ThirdDiv").style.background="yellow";
+		}
+		function fncinput4(){
+			document.getElementById("FourthDiv").style.background="black";
+		}
+		function fncinput5(){
+			document.getElementById("FifthDiv").style.background="green";
+		}
+		function fncinput6(){
+			document.getElementById("SixthDiv").style.background="red";
+		}
+
+		//back to original color//
+
+		function fncclick1(){
+			document.getElementById("FirstDiv").style.background="red";
+		}
+		function fncclick2(){
+			document.getElementById("SecondDiv").style.background="blue";
+		}
+		function fncclick3(){
+			document.getElementById("ThirdDiv").style.background="gray";
+		}
+		function fncclick4(){
+			document.getElementById("FourthDiv").style.background="yellow";
+		}
+		function fncclick5(){
+			document.getElementById("FifthDiv").style.background="black";
+		}
+		function fncclick6(){
+			document.getElementById("SixthDiv").style.background="green";
+		}
+
+	</script>
+<style>
+	button {
+		background-color: orange;
+	}
+</style>
+</head>
+<body style="width: 100%;"><br><br>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-1">
+				<div id="FirstDiv" style="border: 1px solid black;background-color: red;color: white;">RED
+				</div>
+			</div>
+			<div class="col-md-1" style="border: px solid black;">
+			</div>
+			<div class="col-md-1">
+				<div id="SecondDiv" style="border: 1px solid black;background-color: blue;color: white;">BLUE
+				</div>
+			</div>
+			<div class="col-md-1" style="border: px solid black;">
+			</div>
+			<div class="col-md-1">
+				<div id="ThirdDiv" style="border: 1px solid black;background-color: gray;color: white;">GRAY
+				</div>
+			</div>
+			<div class="col-md-1" style="border: px solid black;">
+			</div>
+			<div class="col-md-1">
+				<div id="FourthDiv" style="border: 1px solid black;background-color: yellow;color: white;">YELLOW
+				</div>
+			</div>
+			<div class="col-md-1" style="border: px solid black;">
+			</div>
+			
+			<div class="col-md-1">
+				<div id="FifthDiv" style="border: 1px solid black;background-color: black;color: white;">BLACK
+				</div>
+			</div>
+			<div class="col-md-1" style="border: px solid black;">
+			</div>
+			<div class="col-md-1">
+				<div id="SixthDiv" style="border: 1px solid black;background-color: green;color: white;">GREEN
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-md-1" style="">
+				<input type="text" oninput="fncinput1()" style="width:70px"></input>
+			</div>
+			<div class="col-md-1" style="border: px solid black;">
+			</div>
+			<div class="col-md-1" style="">
+				<input type="text" oninput="fncinput2()" style="width:70px"></input>
+			</div>
+			<div class="col-md-1" style="border: px solid black;">
+			</div>
+			<div class="col-md-1" style="">
+				<input type="text" oninput="fncinput3()" style="width:70px"></input>
+			</div>
+			<div class="col-md-1" style="border: px solid black;">
+			</div>
+			<div class="col-md-1" style="">
+				<input type="text" oninput="fncinput4()" style="width:70px"></input>
+			</div>
+			<div class="col-md-1" style="border: px solid black;">
+			</div>
+			<div class="col-md-1" style="">
+				<input type="text" oninput="fncinput5()" style="width:70px"></input>
+			</div>
+			<div class="col-md-1" style="border: px solid black;">
+			</div>
+			<div class="col-md-1" style="">
+				<input type="text" oninput="fncinput6()" style="width:70px"></input>
+			</div>
+			<div class="col-md-1" style="border: px solid black;">
+			</div>
+		</div>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-md-1" style="">
+				<button onclick="fncclick1()">original color</button>
+			</div>
+			<div class="col-md-1" style="border: px solid black;">
+			</div>
+			<div class="col-md-1" style="">
+				<button onclick="fncclick2()">original color</button>
+			</div>
+			<div class="col-md-1" style="border: px solid black;">
+			</div>
+			<div class="col-md-1" style="">
+				<button onclick="fncclick3()">original color</button>
+			</div>
+			<div class="col-md-1" style="border: px solid black;">
+			</div>
+			<div class="col-md-1" style="">
+				<button onclick="fncclick4()">original color</button>
+			</div>
+			<div class="col-md-1" style="border: px solid black;">
+			</div>
+			<div class="col-md-1" style="">
+				<button onclick="fncclick5()">original color</button>
+			</div>
+			<div class="col-md-1" style="border: px solid black;">
+			</div>
+			<div class="col-md-1" style="">
+				<button onclick="fncclick6()">original color</button>
+			</div>
+			<div class="col-md-1" style="border: px solid black;">
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

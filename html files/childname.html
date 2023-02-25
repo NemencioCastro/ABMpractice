@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<head>
+  <title></title>
+
+  <script>
+    function ShowMeDetails(){
+      var childName=document.getElementById("txtChildName").value;
+      var sex=document.getElementById("txtSex").value
+      if(childName != ""){
+        document.getElementById("lblChildName").innerHTML="The name of child is "+childName;
+        document.getElementById("lblChildName").style.display="block";
+      }
+
+      if(sex="Male"){
+        document.getElementById("lblSex").innerHTML="The sex of child is "+sex;
+        document.getElementById("lblSex").style.display="block";
+      }
+      else(sex="Female"){
+        document.getElementById("lblSex").innerHTML="The sex of child is "+sex;
+        document.getElementById("lblSex").style.display="block";
+      }
+    
+    }
+  
+  
+
+  </script>
+</head>
+<body style="width: 100%;">
+  <LABEL>Name of the child</LABEL>
+  <input type="text" id="txtChildName" name="">
+  <label id="lblChildName" style="color: red;font-size: 12px;display: none;"></label>
+  <br>
+  <br>
+  
+      <input type="radio" id="txtSex" name="fav_language" value="Male">
+         <label for="html">Male</label>
+     
+      <input type="radio" id="txtSex" name="fav_language" value="Female">
+         <label for="html">Female</label>
+     <label id="lblSex" style="color: red;font-size: 12px;display: none;"></label>
+
+  <br><br>    
+  <button onclick="ShowMeDetails();">Submit</button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
