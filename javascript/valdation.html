@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<head>
+  <title></title>
+
+  <script>
+    function ShowMeDetails(){
+      var childName=document.getElementById("txtChildName").value;
+      var sexMale=document.getElementById("txtMale").checked;
+      var sexFemale=document.getElementById("txtFemale").checked;
+      var fatherName=document.getElementById("txtFatherName").value;
+      var motherName=document.getElementById("txtMotherName").value;
+      var cityName=document.getElementById("txtCityName").value;
+      var provinceName=document.getElementById("txtProvinceName").value;
+      var countryName=document.getElementById("txtCountryName").value;
+    
+
+
+      console.log(sexMale);
+      console.log(sexFemale);
+      console.log(fatherName)
+      if(childName != ""){
+        document.getElementById("lblChildName").innerHTML="The name of child is "+childName;
+        document.getElementById("lblChildName").style.display="block";
+      }
+      if(childName==""){
+        document.getElementById("divErrorChildName").style.display="block";
+      }
+      else{
+        document.getElementById("divErrorChildName").style.display="none";
+      }
+
+      if(sexMale==true){
+        document.getElementById("lblSex").innerHTML="The sex of child is "+"Male";
+        document.getElementById("lblSex").style.display="block";
+      }
+      if (sexFemale==true){
+        document.getElementById("lblSex").innerHTML="The sex of child is "+"Female";
+        document.getElementById("lblSex").style.display="block";
+      }
+      if(sexMale != true && sexFemale != true){
+        document.getElementById("divErrorGender").style.display="block";
+       
+      }
+      else{
+        document.getElementById("divErrorGender").style.display="none";
+      }
+      if(fatherName != ""){
+        document.getElementById("lblFatherName").innerHTML="The name of father is "+fatherName;
+        document.getElementById("lblFatherName").style.display="block";
+      }
+      if(fatherName==""){
+        document.getElementById("divErrorFatherName").style.display="block";
+      }
+      else{
+        document.getElementById("divErrorFatherName").style.display="none";
+      }
+      if(motherName != ""){
+        document.getElementById("lblMotherName").innerHTML="The name of mother is "+motherName;
+        document.getElementById("lblMotherName").style.display="block";
+      }
+       if(motherName==""){
+        document.getElementById("divErrorMotherName").style.display="block";
+      }
+      else{
+        document.getElementById("divErrorMotherName").style.display="none";
+      }
+      if(cityName != ""){
+        document.getElementById("lblCityName").innerHTML="The name of the city where Born is "+cityName;
+        document.getElementById("lblCityName").style.display="block";
+      }
+       if(cityName==""){
+        document.getElementById("divErrorCityName").style.display="block";
+      }
+      else{
+        document.getElementById("divErrorCityName").style.display="none";
+      }
+      if(provinceName != ""){
+        document.getElementById("lblProvinceName").innerHTML="The name of the province where Born is "+provinceName;
+        document.getElementById("lblProvinceName").style.display="block";
+      }
+       if(provinceName==""){
+        document.getElementById("divErrorProvinceName").style.display="block";
+      }
+      else{
+        document.getElementById("divErrorProvinceName").style.display="none";
+      }
+      if(countryName != ""){
+        document.getElementById("lblCountryName").innerHTML="The name of the country where Born is "+countryName;
+        document.getElementById("lblCountryName").style.display="block";
+      }
+       if(countryName==""){
+        document.getElementById("divErrorCountryName").style.display="block";
+      }
+      else{
+        document.getElementById("divErrorCountryName").style.display="none";
+
+      }
+}
+
+
+  </script>
+</head>
+<br>
+<body>
+  <div class="container" style="height: 300px;width: 400px;">
+    <div class="row">
+      <div class="col-md-12">
+        <LABEL>Name of the child</LABEL>
+        <input type="text" id="txtChildName" name="">
+        <label id="lblChildName" style="color: red;font-size: 12px;display: none;"></label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12"><label id="divErrorChildName"style="display: none; color:red;font-size: 10px;font-style: italic;">Child Name is Required</label>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <input type="radio" id="txtMale" name="fav_language" value="Male">
+        <label for="html">Male</label>
+        <input type="radio" id="txtFemale" name="fav_language" value="Female">
+        <label for="html">Female</label>
+        <label id="lblSex" style="color: red;font-size: 12px;display: none;"></label>
+      </div>
+      <div class="row">
+      <div class="col-md-12"><label id="divErrorGender" style="display: none; color:red;font-size: 10px;font-style: italic;">Gender is Required</label>
+      </div>
+    </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-12">  
+        <LABEL>Father's Name</LABEL>
+        <input type="text" id="txtFatherName" name="">
+        <label id="lblFatherName" style="color: red;font-size: 12px;display: none;"></label>
+      </div>
+    </div>
+      <div class="row">
+      <div class="col-md-12"><label id="divErrorFatherName"style="display: none; color:red;font-size: 10px;font-style: italic;">Father's Name is Required</label>
+      </div>
+    </div>
+    
+    <br>
+    <div class="row">
+      <div class="col-md-12">   
+        <LABEL>Mother's Name</LABEL>
+        <input type="text" id="txtMotherName" name="">
+        <label id="lblMotherName" style="color: red;font-size: 12px;display: none;"></label>
+      </div>
+    </div>
+      <div class="row">
+      <div class="col-md-12"><label id="divErrorMotherName"style="display: none; color:red;font-size: 10px;font-style: italic;">Mother's Name is Required</label>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-12">   
+        <LABEL>City where Born</LABEL>
+        <input type="text" id="txtCityName" name="">
+        <label id="lblCityName" style="color: red;font-size: 12px;display: none;"></label>
+      </div>
+    </div>
+      <div class="row">
+      <div class="col-md-12"><label id="divErrorCityName"style="display: none; color:red;font-size: 10px;font-style: italic;">City Name is Required</label>
+      </div>
+    </div>
+    <br> 
+    <div class="row">
+      <div class="col-md-12">   
+        <LABEL>Province where Born</LABEL>
+        <input type="text" id="txtProvinceName" name="">
+        <label id="lblProvinceName" style="color: red;font-size: 12px;display: none;"></label>
+      </div>
+    </div>
+      <div class="row">
+      <div class="col-md-12"><label id="divErrorProvinceName"style="display: none; color:red;font-size: 10px;font-style: italic;">Province's Name is Required</label>
+      </div>
+    </div>
+    <br> 
+    <div class="row">
+      <div class="col-md-12">   
+        <LABEL>Country where Born</LABEL>
+        <input type="text" id="txtCountryName" name="">
+        <label id="lblCountryName" style="color: red;font-size: 12px;display: none;"></label>
+      </div>
+    </div>
+      <div class="row">
+      <div class="col-md-12"><label id="divErrorCountryName"style="display: none; color:red;font-size: 10px;font-style: italic;">Country Name is Required</label>
+      </div>
+    </div>
+    <br> 
+    <div class="row">
+      <div class="col-md-12">   
+        <button onclick="ShowMeDetails();">Submit</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
