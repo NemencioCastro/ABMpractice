@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+	<title></title>
+	<style type="text/css">
+
+	</style>
+	<script>
+		function fncValidate(){
+			var Credit=document.getElementById("txtCredit").value;
+			console.log(Credit);
+			
+				if(Credit <500){
+				document.getElementById("divErrorCredit").style.display="block";
+                document.getElementById("txtAge").focus();
+				return false;
+			}
+                
+				else if (Credit >=500 && Credit <=699){
+				console.log(Credit);
+				document.getElementById("divErrorCredit1").style.display="block";
+			
+			}
+			     else if (Credit >=700){
+				console.log(Credit);
+				document.getElementById("divErrorCredit2").style.display="block";
+						
+			}
+        }
+
+
+	</script>
+</head>
+<body>
+    <br><br>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2"style="color:;font-size:16px;">Credit Score
+			</div>
+			<div class="col-md-2"><input maxlength="3"tabindex="1"id="txtCredit" type="text" class="form-control" placeholder="">
+			</div>
+			<div class="row">
+				<div class="col-md-2"><label id="divErrorCredit" style="display: none; color:red;font-size: 14px;font-style: italic;">You are not Eligible</label>
+						
+				<label id="divErrorCredit1" style="display: none; color:red;font-size: 14px;font-style: italic;">You are Still not Eligible</label>
+						
+				<label id="divErrorCredit2" style="display: none; color:green;font-size: 14px;font-style: italic;">You are Eligible</label>
+                 </div>			
+			</div>
+		</div>
+        <br>
+        <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-2"><button onclick="fncValidate();">Submit</button>
+            </div>
+        </div>    
+	</div>
+
+</body>
+</html>
