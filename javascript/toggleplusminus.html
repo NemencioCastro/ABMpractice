@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title></title>
+<style>
+    #demo {
+  width: 100%;
+  padding: 25px;
+  color: white;
+  font-size: 25px;
+  box-sizing: border-box;
+  text-align: center;
+}
+#demo1 {
+  width: 100%;
+  padding: 25px;
+  color: white;
+  font-size: 25px;
+  box-sizing: border-box;
+  text-align: center;
+}
+#demo2 {
+  width: 100%;
+  padding: 25px;
+  color: white;
+  font-size: 25px;
+  box-sizing: border-box;
+  text-align: center;
+}
+</style>
+</head>
+<script>
+function image1() {
+  var x = document.getElementById("demo");
+  console.log(x);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    document.getElementById("demo").style.backgroundColor = "coral";
+    x.innerHTML="My Favorite Sport is Basketball."
+  } else {
+    x.style.display = "none";
+     document.getElementById("demo").style.backgroundColor = "white";
+    x.innerHTML="";
+  }
+}
+function image2() {
+  var x = document.getElementById("demo1");
+  console.log(x);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    document.getElementById("demo1").style.backgroundColor = "coral";
+    x.innerHTML="I Do My Hobbies Once a Week."
+  } else {
+    x.style.display = "none";
+     document.getElementById("demo1").style.backgroundColor = "white";
+    x.innerHTML="";
+  }
+}
+function image3() {
+  var x = document.getElementById("demo2");
+  console.log(x);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    document.getElementById("demo2").style.backgroundColor = "coral";
+    x.innerHTML="Every Summer Season I Play."
+  } else {
+    x.style.display = "none";
+     document.getElementById("demo2").style.backgroundColor = "white";
+    x.innerHTML="";
+  }
+}
+ </script>
+<br>
+<body style="width: 70%;height: 360px;border: 1px solid black;margin-left: 250px;margin-top: 50px;">
+    <div class="container">
+        <div class="row">    
+          <div class="col-md-12" style=" width: 80%;text-align: center;font-size: 25px;">
+             Online Survey
+          </div>
+          
+        </div> 
+    </div> 
+   <br>
+    <div class="container" style="border: 1px solid black; width: 80%;">
+      <div class="row">
+        <div class="col-md-4">
+          
+        </div>
+        <div class="col-md-4">
+            What is your favorite sports?
+        </div>
+        <div class="col-md-4"><img src="images/plus.jpg" alt="pict" onclick="image1()" style="width:25x;height: 30px;margin-top: 5px;float: right;"></a>
+            
+        </div>
+        <div id="demo">
+
+        </div>
+      </div> 
+    </div>
+    <br>
+    <div class="container" style="border: 1px solid black;width: 80%;">
+      <div class="row">
+        <div class="col-md-4">
+          
+        </div>
+        <div class="col-md-4">
+            How many times you do your hobbies?
+        </div>
+        <div class="col-md-4"><img src="images/plus.jpg" alt="pict"  onclick="image2()" style="width:25px;height: 30px;margin-top: 5px;float: right;"></a>
+          
+        </div>
+        <div id="demo1">
+
+        </div>
+      </div>  
+    </div>
+    <br> 
+    <div class="container" style="border: 1px solid black;width:80%">
+        <div class="row">
+            <div class="col-md-4">
+          
+            </div>
+            <div class="col-md-4">
+                What season you most played?
+            </div>
+            <div class="col-md-4"><img src="images/plus.jpg" alt="pict"  onclick="image3()" style="width:25px;height: 30px;margin-top: 5px;float: right;"></a>
+          
+            </div>
+            <div id="demo2">
+
+            </div>
+          </div>   
+    </div>
+   
+    </div>
+</body>
+</html>
