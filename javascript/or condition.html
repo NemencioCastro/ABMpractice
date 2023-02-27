@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+	<title></title>
+	<style type="text/css">
+
+	</style>
+	<script>
+		function fncValidate(){
+			var Grams=document.getElementById("txtGrams").value;
+            let x = Grams
+			console.log(Grams);
+			
+				if(x <=9 && x <=18) {
+				document.getElementById("divErrorGrams").style.display="block";
+                document.getElementById("txtGrams").focus();
+				return false;
+			}
+                
+				else if (x >30 && x <60){
+				console.log(Grams);
+				document.getElementById("divErrorGrams1").style.display="block";
+			
+			}
+			     else if (x >=100){
+				console.log(Grams);
+				document.getElementById("divErrorGrams2").style.display="block";
+						
+			}
+        }
+
+
+	</script>
+</head>
+<body>
+    <br><br>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2"style="color:;font-size:16px;">Candy Eaten in Grams
+			</div>
+			<div class="col-md-2"><input maxlength="3"tabindex="1"id="txtGrams" type="text" class="form-control" placeholder="">
+			</div>
+			<div class="row">
+				<div class="col-md-2"><label id="divErrorGrams" style="display: none; color:red;font-size: 14px;font-style: italic;">Your Teeth will be OK</label>
+						
+				<label id="divErrorGrams1" style="display: none; color:red;font-size: 14px;font-style: italic;">You Need to See a Dentist</label>
+						
+				<label id="divErrorGrams2" style="display: none; color:red;font-size: 14px;font-style: italic;">You Need to Go to the Doctor</label>
+                 </div>			
+			</div>
+		</div>
+        <br>
+        <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-2"><button onclick="fncValidate();">Submit</button>
+            </div>
+        </div>    
+	</div>
+
+</body>
+</html>
