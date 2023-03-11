@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script>
+		function myfunction() {
+			console.log("McDonalds Canada Welcome You.");
+			var userinputCity=prompt("1.Ottawa 2.Montreal 3.Calgary");
+			if (userinputCity == "1"){
+				console.log("McDonalds Ottawa Welcome You.");
+			}
+			else if (userinputCity == "2"){
+				console.log("McDonalds Montreal Welcome You.");
+			}
+			else if (userinputCity == "3"){
+				console.log("McDonalds Calgary Welcome You.");
+			}
+			menu();
+		}
+			function menu(){
+			var menu=prompt("Press 1 to print the menu");
+			if (menu=="1"){
+				var userOrder=prompt("1.McDouble Meal : $ 20 2.Hamburger Meal : $ 6 3.Junior Chicken $ 6");
+				fncinput(userOrder);
+			}
+			
+		}
+			
+			function fncinput(userOrder){
+				if (userOrder =="1"){
+					console.log("McDouble Meal ordered");
+			orderagain();
+				}
+				if (userOrder =="2"){
+					console.log("Hamburger Meal ordered");
+			orderagain();	
+				}
+				if (userOrder =="3"){
+					console.log("Junior Chicken ordered");
+			orderagain();
+				}
+			}
+
+			function orderagain(){
+				var question=prompt("Do you want to order new items. type y or n");
+				if (question == "y"){
+					menu();
+					
+				}
+				else if (question == "n"){
+					console.log("Your order will be here in next 15 mins..See you..Have a good day!!")
+				}
+			}
+
+	
+
+
+			
+
+	</script>
+</head>
+<body onload="myfunction()">
+	
+</body>
+</html>
