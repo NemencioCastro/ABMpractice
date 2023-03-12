@@ -24,7 +24,8 @@
 			var menu=prompt("Press 1 to print the menu");
 			if (menu=="1"){
 				var userOrder=prompt("1.McDouble Meal : $ 20 2.Hamburger Meal : $ 6 3.Junior Chicken $ 6");
-				order(userOrder);
+			fncinput(userOrder);
+
 			}
 			
 		}
@@ -41,14 +42,14 @@
 				if (userOrder =="3"){
 					console.log("Junior Chicken ordered");
 				}
+				orderagain();
 			}
 
 			function orderagain(){
 				var question=prompt("Do you want to order new items. type y or n");
 				if (question == "y"){
-					var menu=menu();
-					fncinput(userOrder);
-					menu()
+					
+					menu();
 				
 				}
 				else if (question == "n"){
@@ -56,7 +57,7 @@
 				}
 			}
 
-		}
+		
 
 
 			
