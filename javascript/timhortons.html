@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <script>
+    var Products="";
+    var Cost=0;
+   
+    function myfunction() {
+      console.log("Welcome to Tim Horton's");
+      var userinputProvince=prompt("1.Alberta 2.Montreal 3.British Columbia");
+      if (userinputProvince == "1"){
+        console.log("Welcome to Tim Horton's Alberta");
+      }
+      else if (userinputProvince == "2"){
+          console.log("Welcome to Tim Horton's Montreal");
+      }
+      else if (userinputProvince == "3"){
+          console.log("Welcome to Tim Horton's Vancouver");
+      }
+      Select();
+    }
+      function Select(){
+      var tims=prompt("To select you item please press 1 to open the menu");
+      if (tims=="1"){
+        console.log("Menu has been selected");
+        menu();
+      }
+      
+  }
+      function menu(){
+        var items=prompt("1. Coffee Dark Roast 2. Blueberry muffin 3. Croissant with cheese 4. Tim bits")
+        fncinput(items);
+      }
+      function fncinput(userOrder){
+        if (userOrder =="1"){
+          Products+="Coffee Dark Roast 10$";
+          console.log("Coffee Dark Roast 10$");
+          Cost+=10;
+      orderagain();
+        }
+        if (userOrder =="2"){
+           Products+="Blueberry muffin 20$";
+           Cost+=20;
+          console.log("Blueberry muffin 20$");
+      orderagain();
+        }
+        if (userOrder =="3"){
+           Products+="Croissant with cheese 3$";
+           Cost+=3;
+          console.log("Croissant with cheese 3$");
+      orderagain();
+        }
+        if (userOrder =="4"){
+          Products+="Tim bits$ 19$";
+          Cost+=19;
+          console.log("Tim bits 19$x");
+      orderagain();
+        }
+    }
+      function orderagain(){
+        var question=prompt("Do you wish to continue? press y/n");
+        if (question == "y"){
+          console.log("Please enter the order again")
+          menu();
+        }
+        else if (question == "n"){
+          console.log("Do you want to order something else?")
+          PrintReciept();
+          PrintReciept1()
+        }
+    }
+    function PrintReciept(){
+      console.log("Your final bill with the items you selected are : " + Products);
+      console.log("Have a great day")
+    }
+    function PrintReciept1(){
+      console.log("Your Total bill is : $ " +  Cost );
+      
+    }
+      
+  </script>
+</head>
+<body onload="myfunction()">
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

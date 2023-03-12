@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <script>
+    var Products="";
+    function myfunction() {
+      console.log("Welcome to Best Buy Canada");
+      var userinputProvince=prompt("1.Alberta 2.Montreal 3.Vancouver");
+      if (userinputProvince == "1"){
+        console.log("Welcome to Best Buy Alberta");
+      }
+      else if (userinputProvince == "2"){
+          console.log("Welcome to Best Buy Montreal");
+      }
+      else if (userinputProvince == "3"){
+          console.log("Welcome to Best Buy Vancouver");
+      }
+      Shippinginfo();
+    }
+      function Shippinginfo(){
+      var deliveryinfo=prompt("How do you want to place the order? 1) Shipping/order online 2) You want to book a slot for representative so that he/she will show you the products.");
+      if (deliveryinfo=="1"){
+        console.log("Shipping has been selected");
+        menu();
+      }
+      else if (deliveryinfo =="2"){
+        console.log("A representative will be at you shortly.")
+        menu();
+    }
+  }
+      function menu(){
+        var items=prompt("1. PC 2. Monitor 3. Mouse 4. HDMI Cable")
+        fncinput(items);
+      }
+      function fncinput(userOrder){
+        if (userOrder =="1"){
+          Products+="PC 1000$";
+          console.log("PC 1000$");
+      orderagain();
+        }
+        if (userOrder =="2"){
+           Products+="Monitor 500$";
+          console.log("Monitor 500$");
+      orderagain();
+        }
+        if (userOrder =="3"){
+           Products+="Mouse 34$";
+          console.log("Mouse 34$");
+      orderagain();
+        }
+        if (userOrder =="4"){
+          Products+="HDMI Cable 10$";
+          console.log("HDMI Cable 10$");
+      orderagain();
+        }
+    }
+      function orderagain(){
+        var question=prompt("Do you wish to continue? y or n");
+        if (question == "y"){
+          menu();
+        }
+        else if (question == "n"){
+          console.log("Your order has been placed..See you..Have a good day!!")
+          PrintReciept();
+        }
+    }
+    function PrintReciept(){
+      console.log("Your final added Products are these : " + Products);
+    }
+  </script>
+</head>
+<body onload="myfunction()">
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
