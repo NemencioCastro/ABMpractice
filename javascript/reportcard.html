@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    table,th,td {
+      text-align: center;
+      border: 1px solid black;
+      border-collapse: collapse;
+}
+    }
+  </style>
+  <script>
+    var stringEngTotalMarks1=100;
+    var stringUrduTotalMarks1=100;
+    var stringMathTotalMarks1=100;
+    var stringIslamyatTotalMarks1=100;
+    var stringPhysicsTotalMarks1=100;
+    var stringChemTotalMarks1=100;
+    var stringArabiTotalMarks1=100;
+    var stringParkTotalMarks1=100;
+    var stringEngTotalMarks2=68;
+    var stringUrduTotalMarks2=79;
+    var stringMathTotalMarks2=80;
+    var stringIslamyatTotalMarks2=69;
+    var stringPhysicsTotalMarks2=73;
+    var stringChemTotalMarks2=69;
+    var stringArabiTotalMarks2=76;
+    var stringParkTotalMarks2=70;
+    var stringEngTotalMarks3=81;
+    var stringUrduTotalMarks3=99;
+    var stringMathTotalMarks3=68;
+    var stringIslamyatTotalMarks3=70;
+    var stringPhysicsTotalMarks3=65;
+    var stringChemTotalMarks3=81;
+    var stringArabiTotalMarks3=69;
+    var stringParkTotalMarks3=68;
+    var stringEngObtMarks1=81;
+    var stringUrduObtMarks1=99;
+    var stringMathObtMarks1=68;
+    var stringIslamyatObtMarks1=70;
+    var stringPhysicsObtMarks1=65;
+    var stringChemObtMarks1=81;
+    var stringArabiObtMarks1=69;
+    var stringParkObtMarks1=68;
+    var stringEngObtMarks2=81;
+    var stringUrduObtMarks2=99;
+    var stringMathObtMarks2=68;
+    var stringIslamyatObtMarks2=70;
+    var stringPhysicsObtMarks2=65;
+    var stringChemObtMarks2=81;
+    var stringArabiObtMarks2=69;
+    var stringParkObtMarks2=68;
+    var stringEngObtMarks3=65;
+    var stringUrduObtMarks3=82;
+    var stringMathObtMarks3=69;
+    var stringIslamyatObtMarks3=70;
+    var stringPhysicsObtMarks3=65;
+    var stringChemObtMarks3=81;
+    var stringArabiObtMarks3=95;
+    var stringParkObtMarks3=68;
+   
+   
+    function fncLoadMarks(){
+     document.getElementById("lblEngTotalMarks1").innerHTML=stringEngTotalMarks1;
+     document.getElementById("lblUrduTotalMarks1").innerHTML=stringUrduTotalMarks1;
+     document.getElementById("lblMathTotalMarks1").innerHTML=stringMathTotalMarks1;
+     document.getElementById("lblIslamyatTotalMarks1").innerHTML=stringIslamyatTotalMarks1;
+     document.getElementById("lblPhysicsTotalMarks1").innerHTML=stringPhysicsTotalMarks1;
+     document.getElementById("lblChemTotalMarks1").innerHTML=stringChemTotalMarks1;
+     document.getElementById("lblArabiTotalMarks1").innerHTML=stringArabiTotalMarks1;
+     document.getElementById("lblParkTotalMarks1").innerHTML=stringParkTotalMarks1;
+     document.getElementById("lblEngTotalMarks2").innerHTML=stringEngTotalMarks2;
+     document.getElementById("lblUrduTotalMarks2").innerHTML=stringUrduTotalMarks2;
+     document.getElementById("lblMathTotalMarks2").innerHTML=stringMathTotalMarks2;
+     document.getElementById("lblIslamyatTotalMarks2").innerHTML=stringIslamyatTotalMarks2;
+     document.getElementById("lblPhysicsTotalMarks2").innerHTML=stringPhysicsTotalMarks2;
+     document.getElementById("lblChemTotalMarks2").innerHTML=stringChemTotalMarks2;
+     document.getElementById("lblArabiTotalMarks2").innerHTML=stringArabiTotalMarks2;
+     document.getElementById("lblParkTotalMarks2").innerHTML=stringParkTotalMarks2;
+     document.getElementById("lblEngTotalMarks3").innerHTML=stringEngTotalMarks3;
+     document.getElementById("lblUrduTotalMarks3").innerHTML=stringUrduTotalMarks3;
+     document.getElementById("lblMathTotalMarks3").innerHTML=stringMathTotalMarks3;
+     document.getElementById("lblIslamyatTotalMarks3").innerHTML=stringIslamyatTotalMarks3;
+     document.getElementById("lblPhysicsTotalMarks3").innerHTML=stringPhysicsTotalMarks3;
+     document.getElementById("lblChemTotalMarks3").innerHTML=stringChemTotalMarks3;
+     document.getElementById("lblArabiTotalMarks3").innerHTML=stringArabiTotalMarks3;
+     document.getElementById("lblParkTotalMarks3").innerHTML=stringParkTotalMarks3;
+     document.getElementById("lblEngObtMarks1").innerHTML=stringEngObtMarks1;
+     document.getElementById("lblUrduObtMarks1").innerHTML=stringUrduObtMarks1;
+     document.getElementById("lblMathObtMarks1").innerHTML=stringMathObtMarks1;
+     document.getElementById("lblIslamyatObtMarks1").innerHTML=stringIslamyatObtMarks1;
+     document.getElementById("lblPhysicsObtMarks1").innerHTML=stringPhysicsObtMarks1;
+     document.getElementById("lblChemObtMarks1").innerHTML=stringChemObtMarks1;
+     document.getElementById("lblArabiObtMarks1").innerHTML=stringArabiObtMarks1;
+     document.getElementById("lblParkObtMarks1").innerHTML=stringParkObtMarks1;
+     document.getElementById("lblEngObtMarks2").innerHTML=stringEngObtMarks2;
+     document.getElementById("lblUrduObtMarks2").innerHTML=stringUrduObtMarks2;
+     document.getElementById("lblMathObtMarks2").innerHTML=stringMathObtMarks2;
+     document.getElementById("lblIslamyatObtMarks2").innerHTML=stringIslamyatObtMarks2;
+     document.getElementById("lblPhysicsObtMarks2").innerHTML=stringPhysicsObtMarks2;
+     document.getElementById("lblChemObtMarks2").innerHTML=stringChemObtMarks2;
+     document.getElementById("lblArabiObtMarks2").innerHTML=stringArabiObtMarks2;
+     document.getElementById("lblParkObtMarks2").innerHTML=stringParkObtMarks2;
+     document.getElementById("lblEngObtMarks3").innerHTML=stringEngObtMarks3;
+     document.getElementById("lblUrduObtMarks3").innerHTML=stringUrduObtMarks3;
+     document.getElementById("lblMathObtMarks3").innerHTML=stringMathObtMarks3;
+     document.getElementById("lblIslamyatObtMarks3").innerHTML=stringIslamyatObtMarks3;
+     document.getElementById("lblPhysicsObtMarks3").innerHTML=stringPhysicsObtMarks3;
+     document.getElementById("lblChemObtMarks3").innerHTML=stringChemObtMarks3;
+     document.getElementById("lblArabiObtMarks3").innerHTML=stringArabiObtMarks3;
+     document.getElementById("lblParkObtMarks3").innerHTML=stringParkObtMarks3;
+
+
+     var GrandTotalMarks1=(stringEngTotalMarks1)+(stringUrduTotalMarks1)+(stringMathTotalMarks1)+(stringIslamyatTotalMarks1)+(stringPhysicsTotalMarks1)+(stringChemTotalMarks1)+(stringArabiTotalMarks1)+(stringParkTotalMarks1);
+    document.getElementById("lblGrandTotalMarks1").innerHTML = GrandTotalMarks1;
+     var GrandTotalMarks2=(stringEngTotalMarks2)+(stringUrduTotalMarks2)+(stringMathTotalMarks2)+(stringIslamyatTotalMarks2)+(stringPhysicsTotalMarks2)+(stringChemTotalMarks2)+(stringArabiTotalMarks2)+(stringParkTotalMarks2);
+    document.getElementById("lblGrandTotalMarks2").innerHTML = GrandTotalMarks2;
+    var GrandTotalMarks3=(stringEngTotalMarks3)+(stringUrduTotalMarks3)+(stringMathTotalMarks3)+(stringIslamyatTotalMarks3)+(stringPhysicsTotalMarks3)+(stringChemTotalMarks3)+(stringArabiTotalMarks3)+(stringParkTotalMarks3);
+    document.getElementById("lblGrandTotalMarks3").innerHTML = GrandTotalMarks3;
+     var GrandObtMarks1=(stringEngObtMarks1)+(stringUrduObtMarks1)+(stringMathObtMarks1)+(stringIslamyatObtMarks1)+(stringPhysicsObtMarks1)+(stringChemObtMarks1)+(stringArabiObtMarks1)+(stringParkObtMarks1);
+    document.getElementById("lblGrandObtMarks1").innerHTML = GrandObtMarks1;
+     var GrandObtMarks2=(stringEngObtMarks2)+(stringUrduObtMarks2)+(stringMathObtMarks2)+(stringIslamyatObtMarks2)+(stringPhysicsObtMarks2)+(stringChemObtMarks2)+(stringArabiObtMarks2)+(stringParkObtMarks2);
+    document.getElementById("lblGrandObtMarks2").innerHTML = GrandObtMarks2;
+    var GrandObtMarks3=(stringEngObtMarks3)+(stringUrduObtMarks3)+(stringMathObtMarks3)+(stringIslamyatObtMarks3)+(stringPhysicsObtMarks3)+(stringChemObtMarks3)+(stringArabiObtMarks3)+(stringParkObtMarks3);
+    document.getElementById("lblGrandObtMarks3").innerHTML = GrandObtMarks3;
+
+     if (stringEngObtMarks1 >=70){
+        document.getElementById("lblEngStatus1").innerHTML="Pass";
+      }
+     else{
+        document.getElementById("lblEngStatus1").innerHTML="Fail"
+      }
+       if (stringUrduObtMarks1 >=70){
+        document.getElementById("lblUrduStatus1").innerHTML="Pass";
+      }
+     else{
+        document.getElementById("lblEngStatus1").innerHTML="Fail"
+      }
+      if (stringMathObtMarks1 >=70){
+        document.getElementById("lblMathStatus1").innerHTML="Pass";
+      }
+     else{
+        document.getElementById("lblMathStatus1").innerHTML="Fail"
+      }
+       if (stringIslamyatObtMarks1 >=70){
+        document.getElementById("lblIslamyatStatus1").innerHTML="Pass";
+      }
+     else{
+        document.getElementById("lblEngStatus1").innerHTML="Fail"
+      }
+       if (stringPhysicsObtMarks1 >=70){
+        document.getElementById("lblPhysicsStatus1").innerHTML="Pass";
+      }
+     else{
+        document.getElementById("lblPhysicsStatus1").innerHTML="Fail"
+      }
+       if (stringChemObtMarks1 >=70){
+        document.getElementById("lblChemStatus1").innerHTML="Pass";
+      }
+     else{
+        document.getElementById("lblChemStatus1").innerHTML="Fail"
+      }
+       if (stringArabiObtMarks1 >=70){
+        document.getElementById("lblArabiStatus1").innerHTML="Pass";
+      }
+     else{
+        document.getElementById("lblArabiStatus1").innerHTML="Fail"
+      }
+       if (stringParkObtMarks1 >=70){
+        document.getElementById("lblParkStatus1").innerHTML="Pass";
+      }
+     else{
+        document.getElementById("lblParkStatus1").innerHTML="Fail"
+      }
+      
+ 
+   }
+  </script>
+</head>
+<body onload="fncLoadMarks()">
+  <h1 style="text-align:center;">Student Report Card</h1>
+  <table class="MainDiv" style=" width: 100%;background-color: #9fdf9f;">
+      <tr>
+        <th>Name Yad Ali
+        </th>
+         <th colspan="3">1st Term Exam
+        </th>
+         <th colspan="3">2nd Term Exam
+        </th>
+         <th colspan="3">Final Term Exam
+        </th>
+      </tr>
+      <tr>
+        <td>
+            <label id="lblSubjects">
+            Subjects
+            </label>
+        </td>
+        <td>
+            <label id="lblTotalMarks">
+            Total Marks
+            </label>
+        </td>
+        <td>
+            <label id="lblObtMarks">
+           Obt Marks
+            </label>
+        </td>
+        <td>
+            <label id="lblStatus">
+            Status
+            </label>
+        </td>
+       <td>
+            <label id="lblTotalMarks  ">
+            Total Marks
+            </label>
+        </td>
+        <td>
+            <label id="lblObtMarks">
+           Obt Marks
+            </label>
+        </td>
+        <td>
+            <label id="lblStatus">
+            Status
+            </label>
+        </td>
+        <td>
+            <label id="lblTotalMarks">
+            Total Marks
+            </label>
+        </td>
+        <td>
+            <label id="lblObtMarks">
+           Obt Marks
+            </label>
+        </td>
+        <td>
+            <label id="lblStatus">
+            Status
+            </label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <label id="lblSubEnglish">
+            English
+            </label>
+        </td>
+        <td>
+            <label id="lblEngTotalMarks1">
+            
+            </label>
+        </td>
+        <td>
+            <label id="lblEngObtMarks1">
+          
+            </label>
+        </td>
+        <td>
+            <label id="lblEngStatus1">
+           
+            </label>
+        </td>
+       <td>
+            <label id="lblEngTotalMarks2">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblEngObtMarks2">
+          
+            </label>
+        </td>
+        <td>
+            <label id="lblEngStatus2">
+           
+            </label>
+        </td>
+       <td>
+            <label id="lblEngTotalMarks3">
+            
+            </label>
+        </td>
+        <td>
+            <label id="lblEngObtMarks3">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblEngStatus3">
+           
+            </label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <label id="lblSubUrdu">
+            Urdu
+            </label>
+        </td>
+        <td>
+            <label id="lblUrduTotalMarks1">
+            
+            </label>
+        </td>
+        <td>
+            <label id="lblUrduObtMarks1">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblUrduStatus1">
+            
+            </label>
+        </td>
+       <td>
+            <label id="lblUrduTotalMarks2">
+            
+            </label>
+        </td>
+        <td>
+            <label id="lblUrduObtMarks2">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblUrduStatus2">
+           
+            </label>
+        </td>
+       <td>
+            <label id="lblUrduTotalMarks3">
+            
+            </label>
+        </td>
+        <td>
+            <label id="lblUrduObtMarks3">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblUrduStatus3">
+           
+            </label>
+        </td>
+      </tr>
+     <tr>
+        <td>
+            <label id="lblSubMath">
+            Math's
+            </label>
+        </td>
+        <td>
+            <label id="lblMathTotalMarks1">
+            
+            </label>
+        </td>
+        <td>
+            <label id="lblMathObtMarks1">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblMathStatus1">
+           
+            </label>
+        </td>
+       <td>
+            <label id="lblMathTotalMarks2">
+            
+            </label>
+        </td>
+        <td>
+            <label id="lblMathObtMarks2">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblMathStatus2">
+            
+            </label>
+        </td>
+       <td>
+            <label id="lblMathTotalMarks3">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblMathObtMarks3">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblMathStatus3">
+           
+            </label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <label id="lblSubIslamyat">
+            Islamyat
+            </label>
+        </td>
+        <td>
+            <label id="lblIslamyatTotalMarks1">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblIslamyatObtMarks1">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblIslamyatStatus1">
+           
+            </label>
+        </td>
+       <td>
+            <label id="lblIslamyatTotalMarks2">
+            
+            </label>
+        </td>
+        <td>
+            <label id="lblIslamyatObtMarks2">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblIslamyatStatus2">
+            
+            </label>
+        </td>
+       <td>
+            <label id="lblIslamyatTotalMarks3">
+            
+            </label>
+        </td>
+        <td>
+            <label id="lblIslamyatObtMarks3">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblIslamyatStatus3">
+            
+            </label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <label id="lblSubPhysics">
+            Physycs/GSC
+            </label>
+        </td>
+        <td>
+            <label id="lblPhysicsTotalMarks1">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblPhysicsObtMarks1">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblPhysicsStatus1">
+            
+            </label>
+        </td>
+       <td>
+            <label id="lblPhysicsTotalMarks2">
+            
+            </label>
+        </td>
+        <td>
+            <label id="lblPhysicsObtMarks2">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblPhysicsStatus2">
+            
+            </label>
+        </td>
+       <td>
+            <label id="lblPhysicsTotalMarks3">
+            
+            </label>
+        </td>
+        <td>
+            <label id="lblPhysicsObtMarks3">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblPhysicsStatus3">
+            
+            </label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <label id="lblSubChem">
+            Chemistry/Drawing
+            </label>
+        </td>
+        <td>
+            <label id="lblChemTotalMarks1">
+            
+            </label>
+        </td>
+        <td>
+            <label id="lblChemObtMarks1">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblChemStatus1">
+            
+            </label>
+        </td>
+       <td>
+            <label id="lblChemTotalMarks2">
+            
+            </label>
+        </td>
+        <td>
+            <label id="lblChemObtMarks2">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblChemStatus2">
+            
+            </label>
+        </td>
+       <td>
+            <label id="lblChemTotalMarks3">
+            
+            </label>
+        </td>
+        <td>
+            <label id="lblChemObtMarks3">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblChemStatus3">
+            
+            </label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <label id="lblSubArabi">
+            Bio/Arabi
+            </label>
+        </td>
+        <td>
+            <label id="lblArabiTotalMarks1">
+            
+            </label>
+        </td>
+        <td>
+            <label id="lblArabiObtMarks1">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblArabiStatus1">
+            
+            </label>
+        </td>
+       <td>
+            <label id="lblArabiTotalMarks2">
+            
+            </label>
+        </td>
+        <td>
+            <label id="lblArabiObtMarks2">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblArabiStatus2">
+            
+            </label>
+        </td>
+       <td>
+            <label id="lblArabiTotalMarks3">
+            
+            </label>
+        </td>
+        <td>
+            <label id="lblArabiObtMarks3">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblArabiStatus3">
+            
+            </label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <label id="lblSubPark">
+            Park Study
+            </label>
+        </td>
+        <td>
+            <label id="lblParkTotalMarks1">
+            
+            </label>
+        </td>
+        <td>
+            <label id="lblParkObtMarks1">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblParkStatus1">
+            
+            </label>
+        </td>
+       <td>
+            <label id="lblParkTotalMarks2">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblParkObtMarks2">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblParkStatus2">
+            
+            </label>
+        </td>
+       <td>
+            <label id="lblParkTotalMarks3">
+            
+            </label>
+        </td>
+        <td>
+            <label id="lblParkObtMarks3">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblParkStatus3">
+            
+            </label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <label id="lblGtotalMarks">
+            Total Marks
+            </label>
+        </td>
+        <td>
+            <label id="lblGrandTotalMarks1">
+          
+            </label>
+        </td>
+        <td>
+            <label id="lblGrandObtMarks1">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblGrandStatus1">
+       
+            </label>
+        </td>
+       <td>
+            <label id="lblGrandTotalMarks2">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblGrandObtMarks2">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblGrandStatus2">
+            
+            </label>
+        </td>
+       <td>
+            <label id="lblGrandTotalMarks3">
+            
+            </label>
+        </td>
+        <td>
+            <label id="lblGrandObtMarks3">
+           
+            </label>
+        </td>
+        <td>
+            <label id="lblGrandStatus3">
+            
+            </label>
+        </td>
+      </tr>    
+  </table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
