@@ -6,11 +6,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
- 
+
   <title></title>
   <script>
     var count=0;
     var price=4.98;
+    
 
     function AddQty() {
       count++;
@@ -24,12 +25,13 @@
         document.getElementById("totalprice").innerHTML= (count * price).toFixed(2);
       }
     }
+   
 
     function RemoveQty(){
       count--;
       console.log(count);
       document.getElementById("quantity").innerHTML=count;
-   
+
       if (count ==1){
         document.getElementById("totalprice").innerHTML= count * 4.98;
       }
@@ -37,47 +39,47 @@
         document.getElementById("totalprice").innerHTML= (count * price).toFixed(2);
       }
     }
-    function fncloadwebsite() {
-      document.getElementById("totalprice").innerHTML= 0;
-      document.getElementById("quantity").innerHTML= 0;
-
-    }
    
+
+  function fncloadwebsite() {
+    document.getElementById("totalprice").innerHTML= 0;
+    document.getElementById("quantity").innerHTML= 0;
   
-  </script>
+  }
+
+  
+</script>
 </head>
 <body onload="fncloadwebsite()">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        
+      <div class="col-md-3">
         <label style="font-size: 30px">
          Apple
-        </label>
-        <br>
-        <label id="quantity" style="font-size: 25px;">
-          
-        </label>
-        <label>
-          <button style="width: 50px;height: 50px; background-color: lightblue; font-size: 25px;" class="btn btn-white btn-minuse" type="button"  onclick="RemoveQty()">-</button>
-          <button style="width: 50px;height: 50px; background-color: lightblue; font-size: 25px;" class="btn btn-white btn-plus" type="button"  onclick="AddQty()">+</button>
-        </label>
-        <label>
-          <img src="images\apple.jpg" alt="apple" width="150" height="140">
-        </label>
-         <label style="font-size:25px">
-          Unit Price $ 4.98
-        </label>
-      </div>
+       </label>
+       <br>
+       <label id="quantity" style="font-size: 25px;">
+
+       </label>
+       <label>
+        <button style="width: 50px;height: 50px; background-color: lightblue; font-size: 25px;" class="btn btn-white btn-minuse" type="button"  onclick="RemoveQty()">-</button>
+        <button style="width: 50px;height: 50px; background-color: lightblue; font-size: 25px;" class="btn btn-white btn-plus" type="button"  onclick="AddQty()">+</button>
+      </label>
+      <label>
+        <img src="images\apple.jpg" alt="apple" width="150" height="140">
+      </label>
+      <label style="font-size:25px">
+        Unit Price $ 4.98
+      </label>
       <label style="font-size:25px">
         Total Price: $ 
       </label>
       <label id="totalprice" style="font-size:25px;">
-        
       </label>
-      
     </div>
+
   </div>
+</div>
 </body>
 </html>
 
