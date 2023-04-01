@@ -9,18 +9,57 @@
     <link rel="stylesheet" type="text/css" href="">
     <title></title>
     <style>
-    th,td,tr{
+   tr,th,td{
         border: px solid black;
-        padding-left: 80px;
+        padding-left: 95px;
 
     }
     tr{
         width: %;
     }
 </style>
+<script>
+    function fncCheck(email) {
+            console.log(email);
+            if(validateEmail(email) !=true){
+                document.getElementById("divErrorEmail").style.display="block";
+                document.getElementById("txtEmail").focus();
+            }
+            else{
+                document.getElementById("divErrorEmail").style.display="none"
+            }
+        }
+        function validateEmail(email) {
+            var re = /\S+@\S+\.\S+/;
+            return re.test(email);
+    }
+         function fncValidate(){
+            var Email=document.getElementById("txtEmail").value;
+            var Password=document.getElementById("txtPassword").value;
+
+               
+            if(Email=="" && validateEmail(Email) !=true){
+                        document.getElementById("divErrorEmail").style.display="block";
+                        document.getElementById("txtEmail").focus();
+                        return false;
+            }
+            else{
+               document.getElementById("divErrorEmail").style.display="none";
+            }
+            if(Password==""){
+                document.getElementById("divErrorPassword").style.display="block";
+                document.getElementById("txtPassword").focus();
+                return false;
+            }
+            else{
+                document.getElementById("divErrorPassword").style.display="none";
+            }
+         
+  }
+</script>
 </head>
 <body style="width:100%;background-color:whitesmoke;">
-    <table style="width:35%;margin-left:380px;background-color:white;border-radius: 15px;height:485px;box-shadow: 5px 10px #888888;;">
+    <table style="width:30%;margin-left:530px;background-color:white;border-radius: 15px;height:485px;box-shadow: 5px 10px #888888;;">
     <center>
         <tr>
             <th>
@@ -31,14 +70,19 @@
         </tr>
         <tr>
             <td style="margin-left: 10px;">   
-                <label for="uname"><b>Email address</b></label>   <br>
-                <input type="text" placeholder="" name="uname" style="width:250px">
+                <label style="height"><b>Email address</b></label>   <br>
+                <input id="txtEmail"oninput="fncCheck(this.value);" type="text" placeholder="" name="uname" style="width:250px"><br>
+                <label id="divErrorEmail"style="display: none; color:red;font-size: 10px;font-style: italic;">Correct Email Required</label>
             </td>
+            
+            
         </tr>
         <tr>
             <td>   
                 <label for="uname"><b>Password</b></label>   <br>
-                <input type="text" placeholder="" name="uname" style="width:250px">
+                <input id="txtPassword" type="Password"  placeholder=
+                "" style="width:250px">
+                <label id="divErrorPassword"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your password</label>
             </td>
         </tr>
         <tr> 
@@ -46,16 +90,17 @@
                 <label>
                    <input type="checkbox" unchecked="" name="remember"> Remember Password
                </label>
+             
            </td> 
        </tr>
        <tr>
          <td>
-            <button type="submit"style="width: 250px;background-color:#0099cc;border: none;color: white;padding-left:">LOGIN</button>
+            <button onclick="fncValidate();" type="login"style="width: 250px;background-color:#0099cc;border: none;color: white;padding-left:">LOGIN</button>
         </tr>
         <br>
         <br>  
         <tr> 
-            <td  style="text-align:center;">
+            <td  style="text-align:center; ">
                 <label><a href="#" style="color:#00ace6;font-size: 12px;padding-right: 80px;">Forgot Password</a></label>
             </td>
         </tr>
@@ -66,15 +111,15 @@
         </tr>
         
         <tr> 
-            <td  style="text-align:center;font-size: 12px;padding-right: 80px;">
-                <label ><u><a href="#">Terms of Use</u></a> | <a href="#"><u>Privacy Policy</u></a></label>
+            <td  style="text-align:;font-size: 12px;">
+                <label style="padding-left:55px;"><u><a href="#">Terms of Use</u></a> | <a href="#"><u>Privacy Policy</u></a></label>
             </td>
         </tr>  
         </center>              
-    
-
-</table>
-<br><br>
+    </table>
+<footer style="text-align: center;margin-top: 150px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+  <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"/>
+</svg>Globe Digital Wallet ,2023 Castro</footer>
 
 </body>
 </html>

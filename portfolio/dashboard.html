@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="">
+  <title></title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Lato", sans-serif;
+    }
+
+    .sidebar {
+      margin: 0;
+      padding: 0;
+      width: 200px;
+      background-color: #0099cc;
+      position: fixed;
+      height: 100%;
+      overflow: auto;
+    }
+
+    .sidebar a {
+      display: block;
+      color: black;
+      padding: 16px;
+      text-decoration: none;
+    }
+
+    
+
+    .sidebar a:hover:not(.active) {
+      background-color: #34e1eb;
+      color: white;
+    }
+
+    div.content {
+      margin-left: 200px;
+      padding: 1px 16px;
+      height: 1000px;
+    }
+
+    @media screen and (max-width: 700px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+      .sidebar a {float: left;}
+      div.content {margin-left: 0;}
+    }
+
+    @media screen and (max-width: 400px) {
+      .sidebar a {
+        text-align: center;
+        float: none;
+      }
+    }
+
+    nav  a{
+      margin-left: 160px;
+    }
+   
+    #header a label {
+      line-height: .5;
+    }
+    table,tr,th,td{
+      border: px solid black;
+      line-height: 3;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <a href="#"><span class="glyphicon glyphicon-home" style="padding-inline-end: 5px;"></span>DASHBOARD</a>
+    <a href="#"><span class="glyphicon glyphicon-folder-close" style="padding-inline-end: 5px;"></span>ACCOUNT</a>
+    <a href="#"><span class="glyphicon glyphicon-transfer" style="padding-inline-end: 5px;"></span>TRANSFER</a>
+    <a href="#"><span class="glyphicon glyphicon-globe" style="padding-inline-end: 5px;"></span>RECIPIENT</a>
+    <a href="#"><span class="glyphicon glyphicon-list-alt" style="padding-inline-end: 5px;"></span>REPORTS</a>
+    <a href="#"><span class="glyphicon glyphicon-cog" style="padding-inline-end: 5px;"></span>SETTINGS</a>
+  </div>
+
+          <div class="content">
+             <label  style="margin-left:27px">
+               <img src="images\logo.jpg" alt="apple" width="110" height="80">
+             </label>
+             <label  style="margin-right:95px;float: right;">
+               <select id="" style="height: 34px;width: 100px;border: none;">
+                  <option value="USERNAME" selected="selected">USERNAME</option>
+                  <option value="">ADAMMA</option>
+                  <option value="">CASTRO</option>
+                  <option value="">BASANT</option>
+              </select>
+             </label>
+             <div id="header">
+                
+                <nav class="">
+                  <label style="font-size:26px ;color:#0099cc">DASHBOARD</label>
+                  <a href=""style=""><label><center><span style="" class="glyphicon glyphicon-piggy-bank"></span></center><br>Fund account</label></a>
+                  <a href=""style=""><label><center><span class="glyphicon glyphicon-share-alt"></span></center><br>Send money</label></a>
+                  <a href=""style=""><label><center><span class="glyphicon glyphicon-share-alt"></span></center><br>Receive money</label></a>
+                  <a href=""style=""><label><center><span class="glyphicon glyphicon-bitcoin"></span></center><br>Pay bills</label></a>
+                </nav>
+              </div>
+
+              <div style="line-height: 3;">
+                ______________________________________________________________________________________________________________________________________________________________________
+              </div>
+              <div>
+                <p>
+                 CAD Account Details
+                </p>
+                <p>
+                 123456789
+                </p>
+                <p>
+                 USD Account Details
+                </p>
+                <p>
+                 123456789
+                </p>
+              </div>
+              <div class="container" style="background-color: #0099cc;margin-left: -2px;height: 110px;padding-top: 15px;width: 1290px;">
+                <div class="row">
+                  <div class="col-md-4">
+                    <label>You Send<br><input type="text" placeholder="   0,000.00" name="uname" style="width:250px;height: 35px;border-radius: 5px;">
+                    </label><br>
+                    <p><b>Guaranteed rate (72hrs)</b></p>
+                  </div>
+                   <div class="col-md-4">
+                    <label>Recipient Recieves<br><input type="text" placeholder="   0,000.00" name="uname" style="width:250px;height:35px;border-radius: 5px;">
+                    </label>
+                  </div> 
+                  <div class="col-md-4">
+                    <button type="button" class="btn"style="width: 200px;background-color: black;color: white;margin-top: 20px;">Get this rate</button>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4>
+                  <label>Latest Transaction</label>
+                </h4>
+              </div>
+              <div>
+                <table style="width: 100%;">
+                  <tr>  
+                    <th>
+                      Date
+                    </th>
+                    <th>
+                      Transaction
+                    </th>
+                    <th>
+                      Amount
+                    </th>
+                    <th>
+                      Balance
+                    </th>
+                    <p></p>
+                  </tr>
+                  
+                  <tr>
+                    <td>
+                      ddmonthyyyy
+                    </td>
+                    <td>
+                      Transaction#1234 To/From your CAD/USD bal
+                    </td>
+                    <td>
+                      00,000.00CAD
+                    </td>
+                    <td>
+                      00,000.00
+                    </td>
+                  </tr>
+                    <tr>
+                    <td>
+                      ddmonthyyyy
+                    </td>
+                    <td>
+                      Transaction#1234 To/From your CAD/USD bal
+                    </td>
+                    <td>
+                      00,000.00CAD
+                    </td>
+                    <td>
+                      00,000.00
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      ddmonthyyyy
+                    </td>
+                    <td>
+                      Transaction#1234 To/From your CAD/USD bal
+                    </td>
+                    <td>
+                      00,000.00CAD
+                    </td>
+                    <td>
+                      00,000.00
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      ddmonthyyyy
+                    </td>
+                    <td>
+                      Transaction#1234 To/From your CAD/USD bal
+                    </td>
+                    <td>
+                      00,000.00CAD
+                    </td>
+                    <td>
+                      00,000.00
+                    </td>
+                  </tr>                                                                    
+                </table>
+                <p style="line-height: 3;">______________________________________________________________________________________________________________________________________________________________________</p>
+              </div>
+          </div>
+          <footer style="text-align: center;margin-top: -260px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+  <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"/>
+</svg>Globe Digital Wallet ,2023 Castro</footer>
+      </body>
+      </html>

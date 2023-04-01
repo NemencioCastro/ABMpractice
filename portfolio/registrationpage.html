@@ -11,28 +11,217 @@
   <style>
     th,td,tr{
       border: px solid black;
-      padding-left: 20px;
+      padding-left: 75px;
       padding-right: 75px;
     }
     table {
       float: left;
     }
   </style>
+  <script>
+   function fncCreate(email) {
+    console.log(email);
+    if(validateEmail(email) !=true){
+      document.getElementById("divErrorEmail").style.display="block";
+      document.getElementById("txtEmail").focus();
+    }
+    else{
+      document.getElementById("divErrorEmail").style.display="none"
+    }
+  }
+  function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+  }
+
+  function fncValidate(){
+    var FName=document.getElementById("txtFName").value;
+    var LName=document.getElementById("txtLName").value;
+    var Email=document.getElementById("txtEmail").value;
+    var Phone=document.getElementById("txtPhone").value;
+    var Address=document.getElementById("txtAddress").value;
+    var City=document.getElementById("txtCity").value;
+    var State=document.getElementById("txtState").value;
+    var Zip=document.getElementById("txtZip").value;
+    var Country=document.getElementById("txtCountry").value;
+    var Birth=document.getElementById("txtBirth").value;
+    var Password1=document.getElementById("txtPassword1").value;
+    var Password2=document.getElementById("txtPassword2").value;
+    var Check1=document.getElementById("txtCheck1").checked;;
+    var Check2=document.getElementById("txtCheck2").checked;;
+
+    if(FName==""){
+      document.getElementById("divErrorFName").style.display="block";
+      document.getElementById("txtFName").focus();
+      return false;
+    }
+    else{
+      document.getElementById("divErrorFName").style.display="none";
+    }
+    if(LName==""){
+      document.getElementById("divErrorLName").style.display="block";
+      document.getElementById("txtLName").focus();
+      return false;
+    }
+    else{
+      document.getElementById("divErrorLName").style.display="none";
+    }
+    if(Email=="" && validateEmail(email) !=true){
+      document.getElementById("divErrorEmail").style.display="block";
+      document.getElementById("txtEmail").focus();
+      return false;
+      }
+    else{
+        document.getElementById("divErrorEmail").style.display="none";
+    }
+    if(Phone==""){
+      document.getElementById("divErrorPhone").style.display="block";
+      document.getElementById("txtPhone").focus();
+      return false;
+    }
+    else{
+      document.getElementById("divErrorPhone").style.display="none";
+    }
+    if(Address==""){
+      document.getElementById("divErrorAddress").style.display="block";
+      document.getElementById("txtAddress").focus();
+      return false;
+    }
+    else{
+      document.getElementById("divErrorAddress").style.display="none";
+    }
+    if(City==""){
+      document.getElementById("divErrorCity").style.display="block";
+      document.getElementById("txtCity").focus();
+      return false;
+    }
+    else{
+      document.getElementById("divErrorCity").style.display="none";
+    }
+    if(State==""){
+      document.getElementById("divErrorState").style.display="block";
+      document.getElementById("txtState").focus();
+      return false;
+    }
+    else{
+      document.getElementById("divErrorState").style.display="none";
+    }
+    if(Zip==""){
+      document.getElementById("divErrorZip").style.display="block";
+      document.getElementById("txtZip").focus();
+      return false;
+    }
+    else{
+      document.getElementById("divErrorZip").style.display="none";
+    }
+    if(Country==""){
+      document.getElementById("divErrorCountry").style.display="block";
+      document.getElementById("txtCountry").focus();
+      return false;
+    }
+    else{
+      document.getElementById("divErrorCountry").style.display="none";
+    }
+    if(Birth==""){
+      document.getElementById("divErrorBirth").style.display="block";
+      document.getElementById("txtBirth").focus();
+      return false;
+    }
+    else{
+      document.getElementById("divErrorBirth").style.display="none";
+    }
+    if(Password1==""){
+      document.getElementById("divErrorPassword1").style.display="block";
+      document.getElementById("txtPassword1").focus();
+      return false;
+    }
+    else{
+      document.getElementById("divErrorPassword1").style.display="none";
+    }
+    if(Password2==""){
+      document.getElementById("divErrorPassword2").style.display="block";
+      document.getElementById("txtPassword2").focus();
+      return false;
+    }
+    else{
+      document.getElementById("divErrorPassword2").style.display="none";
+    }
+    if(Password1 != Password2){
+
+      document.getElementById("divErrorPassword3").style.display="block";
+    }
+    else{
+      document.getElementById("divErrorPassword3").style.display="none";
+    }
+    if(Check1 != true && Check2 != true){
+      document.getElementById("divErrorCheck").style.display="block";
+    }
+    else{
+      document.getElementById("divErrorCheck").style.display="none";
+    }
+}
+
+//Login Account
+
+  function fncLogin(email2) {
+    console.log(email2);
+    if(validateEmail(email2) !=true){
+      document.getElementById("divErrorEmail2").style.display="block";
+      document.getElementById("txtEmail2").focus();
+    }
+    else{
+      document.getElementById("divErrorEmail2").style.display="none"
+    }
+  }
+  function validateEmail(email2) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email2);
+  }
+  function fncValidate2(){
+    var Email2=document.getElementById("txtEmail2").value;
+    var LoginPass=document.getElementById("txtLoginPass").value;
+    var Check3=document.getElementById("txtCheck3").checked;;
+
+
+    if(Email2=="" && validateEmail(email2) !=true){
+      document.getElementById("divErrorEmail2").style.display="block";
+      document.getElementById("txtEmail2").focus();
+    return false;
+    }
+    else{
+    document.getElementById("divErrorEmail2").style.display="none";
+  }
+    if(LoginPass==""){
+      document.getElementById("divErrorLoginPass").style.display="block";
+      document.getElementById("txtLoginPass").focus();
+      return false;
+    }
+    else{
+      document.getElementById("divErrorLoginPass").style.display="none";
+    }
+     if(Check3 != true){
+      document.getElementById("divErrorCheck3").style.display="block";
+    }
+    else{
+      document.getElementById("divErrorCheck3").style.display="none";
+    }
+}         
+</script>
 </head>
 <body style="width:100%;background-color:whitesmoke;">
   <div style="background-color: white;">
-    <label  style="margin-left:75px;background-color:white;">
-     <img src="images\logo.jpg" alt="apple" width="100" height="60">
+    <label  style="margin-left:175px;background-color:white;">
+     <img src="images\logo.jpg" alt="apple" width="110" height="80">
    </label>
  </div>
  <br>
  <div class="container">
   <div class="row">
     <div class="col-md-8">
-     <table style="width: 75%; margin-left: 50px;margin-top: -12px; background-color: white; border-radius: 15px; height: 485px; box-shadow: 5px 10px #888888; float: left;">
+     <table style="width:200px; margin-left: 1px;margin-top: 12px; background-color: white; border-radius: 15px; height: 490px; box-shadow: 5px 10px #888888; float: left;">
       <tr>
         <th>
-          <label style="font-size: 24px;">
+          <label style="font-size: 24px;padding-top: 5px;">
             Create your account
           </label>
         </th>
@@ -40,91 +229,104 @@
       <tr>
         <td>
           <label for="fname"><b>First Name*</b></label>   <br>
-          <input type="text" placeholder="" name="fname" style="width: 250px">
+          <input id="txtFName" type="text" placeholder="" name="fname" style="width: 250px">
+          <label id="divErrorFName"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your firstname</label>
         </td>
         <td>
           <label for="lname"><b>Last Name*</b></label>   <br>
-          <input type="text" placeholder="" name="lname" style="width: 250px">
+          <input id="txtLName" type="text" placeholder="" name="lname" style="width: 250px">
+          <label id="divErrorLName"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your lastname</label>
         </td>
       </tr>
       <tr>
         <td>
           <label for="email"><b>Email*</b></label>   <br>
-          <input type="text" placeholder="" name="email" style="width: 250px">
+          <input id="txtEmail"oninput="fncCreate(this.value);" type="text" placeholder="" name="email" style="width: 250px">
+          <label id="divErrorEmail"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your valid email</label>
         </td>
         <td>
           <label for="phone"><b>Phone*</b></label>   <br>
-          <input type="text" placeholder="" name="phone" style="width: 250px">
+          <input id="txtPhone" type="number" maxlength="4" placeholder="(000)000-000-0000" name="phone" style="width: 250px">
+          <label id="divErrorPhone"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your phone number</label>
         </td>
       </tr>
       <tr>
         <td>
           <label for="address"><b>Address*</b></label>   <br>
-          <input type="text" placeholder="" name="address" style="width: 250px">
+          <input id="txtAddress" type="text" placeholder="" name="city" style="width: 250px">
+          <label id="divErrorAddress"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your address</label>
         </td>
-        <td>
-          <label for="city"><b>City*</b></label>   <br>
-          <input type="text" placeholder="" name="city" style="width: 250px">
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="state"><b>State*</b></label>   <br>
-          <input type="text" placeholder="" name="state" style="width: 250px">
-        </td>
-        <td>
-          <label for="zip"><b>Zip*</b></label>   <br>
-          <input type="text" placeholder="" name="zip" style="width: 250px">
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="country"><b>Country*</b></label>   <br>
-          <input type="text" placeholder="" name="country" style="width: 250px">
-        </td>
-        <td>
-          <label for="dob"><b>Date of Birth*</b></label>   <br>
-          <input type="text" placeholder="" name="dob" style="width: 250px">
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for="password"><b>Password*</b></label>   <br>
-          <input type="password" placeholder="" name="password" style="width: 250px">
-        </td>
-        <td>
-          <label for="confirm_password"><b>Confirm Password*</b></label>   <br>
-          <input type="password" placeholder="" name="confirm_password" style="width: 250px">
-        </td>
-      </tr>
-        <tr>
-          <td height="55" style=" font-size: 12px;" colspan="2">
-            <label>
-             <input type="checkbox" unchecked="" name="remember">&nbsp;&nbsp;<span style="color:red">I have read and agree to the</span><a href="#">Terms of Use</a> <span style="color:red;">and</span> <a href="#">Privacy Notice.</a><span style="color:red;">(Required)</span>
-           </label>
-         </td>
-        </tr>
-        <tr> 
-         <td style=" font-size: 12px;" colspan="2">
-          <label>
-           <input type="checkbox" unchecked="" name="remember">&nbsp;&nbsp;By checking this box, you agree to receive marketing emails from Globe. You can unsubscribe at any time.
-         </label>
-         </td> 
-        </tr>
-    <tr>
-     
-       <td height="55"colspan="2">
-        <button type="submit"style="width: 300px;background-color:#0099cc;border: none;color: white; text-align: center;margin-left: 170px;">Create Your Account</button>
       </td>
-      
+      <td>
+        <label for="city"><b>City*</b></label>   <br>
+        <input id="txtCity" type="text" placeholder="" name="city" style="width: 250px">
+        <label id="divErrorCity"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your city</label>
+      </td>
     </tr>
-
-
-  </table>
+    <tr>
+      <td>
+        <label for="state"><b>State*</b></label>   <br>
+        <input id="txtState" type="text" placeholder="" name="state" style="width: 250px">
+        <label id="divErrorState"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your state</label>
+      </td>
+      <td>
+        <label for="zip"><b>Zip*</b></label>   <br>
+        <input id="txtZip" maxlength="6" type="text" placeholder="" name="zip" style="width: 250px">
+        <label id="divErrorZip"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your zip code</label>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="country"><b>Country*</b></label>   <br>
+        <input id="txtCountry" type="text" placeholder="" name="country" style="width: 250px">
+        <label id="divErrorCountry"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your country</label>
+      </td>
+      <td>
+        <label for="dob"><b>Date of Birth*</b></label>   <br>
+        <input id="txtBirth" type="text" placeholder="" name="dob" style="width: 250px">
+        <label id="divErrorBirth"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your date of birth</label>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="password"><b>Password*</b></label>   <br>
+        <input id="txtPassword1" type="password" placeholder="" name="password" style="width: 250px">
+        <label id="divErrorPassword1"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your password</label>
+      </td>
+      <td>
+        <label for="confirm_password"><b>Confirm Password*</b></label>   <br>
+        <input id="txtPassword2" type="password" placeholder="" name="confirm_password" style="width: 250px">
+        <label id="divErrorPassword2"style="display: none; color:red;font-size: 10px;font-style: italic;">
+        Please confirm your password</label>
+        <label id="divErrorPassword3"style="display: none; color:red;font-size: 10px;font-style: italic;">
+        Your password did not match</label>
+      </td>
+    </tr>
+    <tr>
+      <td height="55" style=" font-size: 12px;" colspan="2">
+        <label>
+         <input id="txtCheck1" type="checkbox" unchecked="" name="remember">&nbsp;&nbsp;<span style="color:red">I have read and agree to the</span><a href="#">Terms of Use</a> <span style="color:red;">and</span> <a href="#">Privacy Notice.</a><span style="color:red;">(Required)</span>
+       </label>
+     </td>
+   </tr>
+   <tr> 
+     <td style=" font-size: 12px;" colspan="2">
+      <label>
+       <input id="txtCheck2" type="checkbox" unchecked="" name="remember">&nbsp;&nbsp;By checking this box, you agree to receive marketing emails from Globe. You can unsubscribe at any time.
+     </label>
+     <label id="divErrorCheck"style="display: none;color:red;font-size: 10px;font-style: italic;">Check Box Required</label>
+   </td> 
+ </tr>
+ <tr>
+  <td height="55"colspan="2">
+    <button onclick="fncValidate();"type="submit"style="width: 300px;background-color:#0099cc;border: none;color: white; text-align: center;margin-left: 170px;">Create Your Account</button>
+  </td>
+</tr>
+</table>
 </div>
 
+<div class="col-md-4" style="float: right;">
   <table>
-  <div class="col-md-4">
     <tr>
       <th>
         <label style="font-size:16px">
@@ -133,40 +335,41 @@
       </th>
     </tr>
     <br>
-
-     <tr>
+    <tr>
       <th height="80">
         <label for="uname"><b>Email</b></label>   <br>
-            <input type="text" placeholder="" name="uname" style="width:250px">
+        <input id="txtEmail2"oninput="fncLogin(this.value);" type="text" placeholder="" name="uname" style="width:250px">
+        <label id="divErrorEmail2"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your valid email</label>
       </th>
     </tr>
     <tr>
       <th>
         <label for="uname"><b>Password</b></label>   <br>
-            <input type="text" placeholder="" name="uname" style="width:250px">
+        <input id="txtLoginPass" type="password" placeholder="" name="password" style="width:250px">
+        <label id="divErrorLoginPass"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your password</label>
       </th>
     </tr>
-
-     <tr> 
-         <td height="55" style=" font-size: 12px;" colspan="2">
-          <label>
-           <input type="checkbox" unchecked="" name="remember">&nbsp;&nbsp;Remember password
-         </label>
-         </td> 
-      </tr>
-      <tr>
-     
-       <td>
-        <button type="submit"style="width: 200px;background-color:#0099cc;border: none;color: white; text-align: center;margin-left: 30px;">LOGIN</button>
-      </td>
-      
-    </tr>
-
+    <tr> 
+     <td height="55" style=" font-size: 12px;" colspan="2">
+      <label>
+       <input id="txtCheck3" type="checkbox" unchecked="" name="remember">&nbsp;&nbsp;Remember password
+     </label>
+     <label id="divErrorCheck3"style="display: none;color:red;font-size: 10px;font-style: italic;">Check Box Required</label>
+   </td> 
+ </tr>
+ <tr>
+   <td>
+     <button onclick="fncValidate2();" type="submit"style="width: 200px;background-color:#0099cc;border: none;color: white; text-align: center;margin-left: 30px;">LOGIN</button>
+  </td>
+</tr>
 </table>
-  </div>
-  </div>
 </div>
+</div>
+</div>
+</div>
+<footer style="text-align: center;margin-top: 80px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+  <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"/>
+</svg>Globe Digital Wallet ,2023 Castro</footer>
 
-</div>
 </body>
 </html>
