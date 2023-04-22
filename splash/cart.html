@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="">
+  <title></title>
+  <style>
+    
+tr,th,td{
+  border: px solid black;
+  padding-left: 50px;
+}
+
+</style>
+<script>
+  
+    var count1=0;
+    var price1=0;
+    var count2=0;
+    var price2=0;
+    var count3=0;
+    var price3=0;
+    var count4=0;
+    var price4=0;
+    function AddQty1() {
+      count1++;
+      
+      document.getElementById("quantity1").innerHTML=count1;
+      if (count1 ==1){
+        document.getElementById("totalprice1").innerHTML= count1 * 2299;
+        price1=2299;
+      }
+      else{
+        console.log(count1  +" " +  price1);
+        document.getElementById("totalprice1").innerHTML= (count1 * 2299).toFixed(2);
+        price1=(count1 * 2299).toFixed(2);
+      }
+      
+    }
+    function RemoveQty1(){
+      count1--;
+      document.getElementById("quantity1").innerHTML=count1;
+      if (count1 ==1){
+        document.getElementById("totalprice1").innerHTML= count1 * 2299;
+        price1=2299;
+      }
+      else{
+        document.getElementById("totalprice1").innerHTML= (count1 * 2299).toFixed(2);
+         price1=(count1 * 2299).toFixed(2);
+      }
+       
+    }
+     function AddQty2() {
+      count2++;
+       console.log(count2);
+      document.getElementById("quantity2").innerHTML=count2;
+      if (count2 ==1){
+        document.getElementById("totalprice2").innerHTML= count2 * 150;
+        price2=150;
+      }
+      else{
+        console.log(count2  +" " +  price2);
+        document.getElementById("totalprice2").innerHTML= (count2 * 150).toFixed(2);
+        price2=(count2 * 150).toFixed(2);
+      }
+      
+    }
+    function RemoveQty2(){
+      count2--;
+      document.getElementById("quantity2").innerHTML=count2;
+      if (count2 ==1){
+        document.getElementById("totalprice2").innerHTML= count2 * 150;
+        price2=150;
+      }
+      else{
+        document.getElementById("totalprice2").innerHTML= (count2 * 150).toFixed(2);
+         price2=(count2 * 150).toFixed(2);
+      }
+       
+    }
+    function AddQty3() {
+      count3++;
+       console.log(count3);
+      document.getElementById("quantity3").innerHTML=count3;
+      if (count3 ==1){
+        document.getElementById("totalprice3").innerHTML= count3 * 200;
+        price2=200;
+      }
+      else{
+        console.log(count3  +" " +  price3);
+        document.getElementById("totalprice3").innerHTML= (count3 * 200).toFixed(2);
+        price3=(count3 * 200).toFixed(2);
+      }
+      
+    }
+    function RemoveQty3(){
+      count3--;
+      document.getElementById("quantity3").innerHTML=count3;
+      if (count3 ==1){
+        document.getElementById("totalprice3").innerHTML= count3 * 200;
+        price3=200;
+      }
+      else{
+        document.getElementById("totalprice3").innerHTML= (count3 * 200).toFixed(2);
+         price3=(count3 * 200).toFixed(2);
+      }
+       
+    }
+    function AddQty4() {
+      count4++;
+       console.log(count4);
+      document.getElementById("quantity4").innerHTML=count4;
+      if (count4 ==1){
+        document.getElementById("totalprice4").innerHTML= count4 * 219;
+        price4=219;
+      }
+      else{
+        console.log(count4  +" " +  price4);
+        document.getElementById("totalprice4").innerHTML= (count4 * 219).toFixed(2);
+        price4=(count4 * 219).toFixed(2);
+      }
+      
+    }
+    function RemoveQty4(){
+      count4--;
+      document.getElementById("quantity4").innerHTML=count4;
+      if (count4 ==1){
+        document.getElementById("totalprice4").innerHTML= count4 * 219;
+        price4=219;
+      }
+      else{
+        document.getElementById("totalprice4").innerHTML= (count4 * 219).toFixed(2);
+         price4=(count4 * 219).toFixed(2);
+      }
+       
+    }
+     function fncloadwebsite() {
+      document.getElementById("totalprice1").innerHTML= 0;
+      document.getElementById("quantity1").innerHTML= 0;
+      document.getElementById("totalprice2").innerHTML= 0;
+      document.getElementById("quantity2").innerHTML= 0;
+      document.getElementById("totalprice3").innerHTML= 0;
+      document.getElementById("quantity3").innerHTML= 0;
+      document.getElementById("totalprice4").innerHTML= 0;
+      document.getElementById("quantity4").innerHTML= 0;
+    }
+    function buynow() {
+     var totalcost=Number(price1)+Number(price2)+Number(price3)+Number(price4);
+      document.getElementById("lbltotalcost").innerHTML = Number(totalcost);
+      console.log("totalcost");
+  }
+  </script>
+
+</head>
+<body onload="fncloadwebsite()">
+ 
+  <center><table style="width:60%;margin-top: 20px;height: auto;margin-bottom:20px;">
+        <tr style="background-color: #D8EEED;height: 40px;">
+          <td colspan="4" style="font-size: 14;font-weight: bolder;padding-left: 10px;">
+            Bikes
+          </td>
+        </tr>
+        <tr style="background-color:#6FD8D8">
+          <td>
+            Zip Tangent Electric<br>
+            Bike, 26-in
+          </td>
+          <td rowspan="3">
+             <img src="images\bike.jpg" alt="abm" width="60%" height="180"style="border-radius: px;margin-top:40px;margin-left: 15px;padding-bottom: 20px;">
+          </td>
+           <td>
+            CCM Hardline Youth<br> Hardtail Mountain Bike,<br>
+            21-Speed, 24-in
+          </td>
+          <td rowspan="3">    
+             <img src="images\bike2.jpg" alt="abm" width="60%" height="180"style="border-radius: px;margin-top:40px;margin-left: 15px;padding-bottom: 20px;">
+
+          </td>
+        </tr>
+        <tr style="background-color:#6FD8D8">
+          <td colspan="2">
+            Price $ 2, 299
+          </td>
+          <td  colspan="2">
+            Price $ 150.00
+          </td>
+        </tr>
+        <tr style="background-color:#6FD8D8">
+          <td  colspan="2">
+             <label id="quantity1" style="font-size:18px;">
+             </label>
+              <button style="margin-left: 10px;margin-right: 10px;"onclick="RemoveQty1()">--</button>Add<button style="margin-left: 10px;margin-right: px;" onclick="AddQty1()">+</button>
+          </td>
+          <td  colspan="2">
+             <label id="quantity2" style="font-size:18px;">
+             </label>
+              <button style="margin-left: 10px;margin-right: 10px;"onclick="RemoveQty2()">--</button>Add<button style="margin-left: 10px;margin-right: px;" onclick="AddQty2()">+</button>
+          </td>
+        </tr>
+        <tr style="background-color:#6FD8D8">
+          <td id="totalprice1"colspan="2" style="font-size:18px;font-weight:bold;">
+            Total Price: $
+          </td>
+         
+           <td id="totalprice2"colspan="2" style="font-size:18px;font-weight:bold;">
+            Total Price: $
+          </td>
+        </tr>
+        <tr style="background-color:#6FD8D8">
+          <td>
+            CCM Static Dual<br> Suspension Youth <br>Mountain Bike, 24-in
+
+          </td>
+          <td rowspan="3">
+             <img src="images\bike3.jpg" alt="abm" width="60%" height="180"style="border-radius: px;margin-top:40px;margin-left: 15px;padding-bottom: 20px;">
+          </td>
+           <td>
+            Supercycle Momentum <br>Dual Suspension Youth<br> Bike, 5-Speed, 20-In
+          </td>
+          <td rowspan="3">    
+             <img src="images\bike4.jpg" alt="abm" width="60%" height="180"style="border-radius: px;margin-top:40px;margin-left: 15px;padding-bottom: 20px;">
+
+          </td>
+        </tr>
+        <tr style="background-color:#6FD8D8">
+          <td colspan="2">
+            Price $ 200.00
+          </td>
+          <td  colspan="2">
+            Price $ 219.00
+          </td>
+        </tr>
+        <tr style="background-color:#6FD8D8">
+          <td  colspan="2">
+            <label id="quantity3" style="font-size:18px;">
+             </label>
+              <button style="margin-left: 10px;margin-right: 10px;"onclick="RemoveQty3()">--</button>Add<button style="margin-left: 10px;margin-right: px;" onclick="AddQty3()">+</button>
+          </td>
+          <td  colspan="2">
+            <label id="quantity4" style="font-size:18px;">
+             </label>
+              <button style="margin-left: 10px;margin-right: 10px;"onclick="RemoveQty4()">--</button>Add<button style="margin-left: 10px;margin-right: px;" onclick="AddQty4()">+</button>
+          </td>
+        </tr>
+        <tr style="background-color:#6FD8D8">
+           <td id="totalprice3"colspan="2" style="font-size:18px;font-weight:bold;">
+            Total Price: $
+          </td>
+          <td id="totalprice4"colspan="2" style="font-size:18px;font-weight:bold;">
+            Total Price: $
+          </td>
+        </tr>
+        <tr style="background-color:#6FD8D8">
+          <td colspan="4"style="margin-left: 50px;">
+            <button type="button" class="btn"style="width: 135px;background-color: #38B0E4;color:white;margin-top:30px; border-radius: 10px;margin-left:310px;font-size: 18px;font-weight: bolder;"onclick="buynow()">Buy Now</button>
+          </td>
+        </tr>
+        <tr style="background-color:#6FD8D8; height: 70px;">
+          <td id="lbltotalcost" colspan="4" style="padding-left: 600px;font-weight: bold;font-size: 20px;">
+            Total Cost: $
+          </td>
+        </tr>
+      </table></center>
+</body>
+</html>

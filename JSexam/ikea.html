@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="">
+  <title></title>
+  <style>
+    .header{
+      background-color: lightblue;
+      height: 50px;
+    }
+    table{
+      width: 60%;
+      background-color: white;
+      border-radius: 10px;
+      margin-top: 7px;
+    }
+    td,th { 
+      font-size: 16px;
+      padding-left: 40px;
+      padding-top: 5px;
+    }
+    body {background-color: lightgray}
+  </style>
+  <script>    
+    function fncCheck(email) {
+      console.log(email);
+      if(validateEmail(email) !=true){
+        document.getElementById("divErrorEmail").style.display="block";
+        document.getElementById("txtEmail").focus();
+      }
+      else{
+        document.getElementById("divErrorEmail").style.display="none"
+      }
+    }
+    function validateEmail(email) {
+      var re = /\S+@\S+\.\S+/;
+      return re.test(email);
+    }  
+     function validatePhone(phone) {
+        var cp = /^\+?([1-9]{2})\)?[-. ]?([1-9]{4})[-. ]?([1-9]{4})$/;
+        return cp.test(phone);
+  }  
+    function fncValidate(){
+      var FName=document.getElementById("txtFName").value;
+      var LName=document.getElementById("txtLName").value;
+      var RadioMale=document.getElementById("RadioMale").checked;;
+      var RadioFemale=document.getElementById("RadioFemale").checked;;
+      var Email=document.getElementById("txtEmail").value;
+      var Birth=document.getElementById("txtBirth").value;
+      var Phone=document.getElementById("txtPhone").value;
+      var Address=document.getElementById("txtAddress").value;
+      var City=document.getElementById("txtCity").value;
+      var Province=document.getElementById("txtProvince").value;
+      var Zip=document.getElementById("txtZip").value;
+      var Country=document.getElementById("txtCountry").value;
+      var Password1=document.getElementById("txtPassword1").value;
+      var Password2=document.getElementById("txtPassword2").value;
+      var Check1=document.getElementById("Check1").checked;;
+      var Check2=document.getElementById("Check2").checked;;
+      
+
+      if(FName==""){
+        document.getElementById("divErrorFName").style.display="block";
+        document.getElementById("txtFName").focus();
+        return false;
+      }
+      else{
+        document.getElementById("divErrorFName").style.display="none";
+      }
+      if(LName==""){
+        document.getElementById("divErrorLName").style.display="block";
+        document.getElementById("txtLName").focus();
+        return false;
+      }
+      else{
+        document.getElementById("divErrorLName").style.display="none";
+      }
+      if(RadioMale != true && RadioFemale != true){
+        document.getElementById("divErrorRadio").style.display="block";
+        document.getElementById("RadioMale").focus();
+        return false;
+      }
+      else{
+        document.getElementById("divErrorRadio").style.display="none";
+      }
+      if(Email=="" && validateEmail(Email) !=true){
+        document.getElementById("divErrorEmail").style.display="block";
+        document.getElementById("txtEmail").focus();
+        return false;
+      }
+      else{
+        document.getElementById("divErrorEmail").style.display="none";
+      }
+      if(Birth==""){
+        document.getElementById("divErrorBirth").style.display="block";
+        document.getElementById("txtBirth").focus();
+        return false;
+      }
+      else{
+        document.getElementById("divErrorBirth").style.display="none";
+      }
+      if (Phone === "" || Phone.charAt(0) === "0" || Phone.length < 10) {
+        document.getElementById("divErrorPhone").style.display = "block";
+        document.getElementById("txtPhone").focus();
+        return false;
+      } else {
+        document.getElementById("divErrorPhone").style.display = "none";
+      }
+      if(Address==""){
+        document.getElementById("divErrorAddress").style.display="block";
+        document.getElementById("txtAddress").focus();
+        return false;
+      }
+      else{
+        document.getElementById("divErrorAddress").style.display="none";
+      }
+      if(City=="Select One"){
+        document.getElementById("divErrorCity").style.display="block";
+        document.getElementById("txtCity").focus();
+        return false;
+      }
+      else{
+        document.getElementById("divErrorCity").style.display="none";
+      }
+      if(Province=="Select One"){
+        document.getElementById("divErrorProvince").style.display="block";
+        document.getElementById("txtProvince").focus();
+        return false;
+      }
+      else{
+        document.getElementById("divErrorProvince").style.display="none";
+      }
+      if(Zip=="" || Zip.length < 6){
+        document.getElementById("divErrorZip").style.display="block";
+        document.getElementById("txtZip").focus();
+        return false;
+      }
+      else{
+        document.getElementById("divErrorZip").style.display="none";
+      }
+      if(Country=="Select One"){
+        document.getElementById("divErrorCountry").style.display="block";
+        document.getElementById("txtCountry").focus();
+        return false;
+      }
+      else{
+        document.getElementById("divErrorCountry").style.display="none";
+      }
+      if(Password1=="" ){
+        document.getElementById("divErrorPassword1").style.display="block";
+        document.getElementById("txtPassword1").focus();
+        return false;
+      }
+      else{
+        document.getElementById("divErrorPassword1").style.display="none";
+      }
+      
+      if(Password2==""){
+        document.getElementById("divErrorPassword2").style.display="block";
+        document.getElementById("txtPassword2").focus();
+        return false;
+      }
+      else{
+        document.getElementById("divErrorPassword2").style.display="none";
+      }
+      //validate password if too weak
+      if(Password1.length < 8){
+        document.getElementById("divErrorPassword4").style.display="block";
+        document.getElementById("txtPassword1").focus();
+        return false;
+      }
+      else{
+        document.getElementById("divErrorPassword4").style.display="none";
+      }
+      // validate password are match
+      if(Password1 != Password2){
+
+        document.getElementById("divErrorPassword3").style.display="block";
+      }
+      else{
+        document.getElementById("divErrorPassword3").style.display="none";
+      }
+      if(Check1 != true && Check2 != true){
+        document.getElementById("divErrorCheck").style.display="block";
+      }
+      else{
+        document.getElementById("divErrorCheck").style.display="none";
+      }
+
+  }
+
+</script>
+</head>
+<body>
+  <header>
+    <div class="header">
+      <img src="images\logo.jpg" alt="abm" width="100px" height="80px"style="border-radius: px;margin-top:px;margin-left: 15px;padding-bottom: 30px;padding-top: -5px;">
+      <label style="font-size: 30px;font-weight: bolder;">IKEA</label> 
+    </div>    
+  </header>
+  <div class="container">
+    <center><table>
+      <tr>
+        <th style="font-size:22px;font-weight:bolder;padding-left: 40px;">
+          Registration
+        </th>
+      </tr>
+      <tr>
+        <td>
+          <label for="fname"><b>First Name*</b></label>   <br>
+          <input id="txtFName" type="text" placeholder="" name="fname" style="width: 250px">
+          <label id="divErrorFName"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your firstname</label>
+        </td>
+        <td>
+          <label for="lname"><b>Last Name*</b></label>   <br>
+          <input id="txtLName" type="text" placeholder="" name="lname" style="width: 250px">
+          <label id="divErrorLName"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your lastname</label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="radio" id="RadioMale" name="fav_language" value="Male">
+          <label for="html">Male</label>
+          <input type="radio" id="RadioFemale" name="fav_language" value="Female"style="margin-left: 100px;">
+          <label for="html">Female</label>
+          <label id="divErrorRadio" style="color: red;font-size: 12px;display: none;">Gender is Required</label>          
+        </td> 
+        <td>
+          <label for="email"><b>Email*</b></label>   <br>
+          <input id="txtEmail"oninput="fncCheck(this.value);" type="text" placeholder="john.doe@gmail.com" name="email" style="width: 250px">
+          <label id="divErrorEmail"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your valid email</label>
+        </td>              
+      </tr>
+      <tr>
+        <td>
+          <label for="dob"><b>Date of Birth*</b></label>   <br>
+          <input id="txtBirth" type="text" placeholder="" name="dob" style="width: 250px">
+          <label id="divErrorBirth"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your date of birth</label>
+        </td>
+        <td>            
+          <label for="phone"><b>Phone*</b></label>   <br>
+          <input id="txtPhone"  type="text" maxlength="10" placeholder="" name="phone" style="width: 250px">
+          <label id="divErrorPhone" style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your phone number</label>          
+        </td>        
+      </tr>     
+      <tr>
+        <td>
+          <label for="address"><b>Address Line 1*</b></label>   <br>
+          <input id="txtAddress" type="text" placeholder="" name="" style="width: 250px">
+          <label id="divErrorAddress"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your address</label>
+        </td>
+        <td>
+          <label for="address2"><b>Address Line 2</b></label>   <br>
+          <input id="" type="text" placeholder="optional" name="" style="width: 250px">         
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="city"><b>City*</b></label>   <br>
+          <select id="txtCity"name="subject" id="subject"style="height: 34px;width: 250px;">
+            <option value="Select One" selected="selected">Select One</option>
+            <option value="Edmonton" >Edmonton</option>
+            <option value="Vancouver">Vancouver</option>
+            <option value="Toronto">Toronto</option>
+            <option value="Calgary" >Calgary</option>             
+          </select>
+          <label id="divErrorCity"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your address</label>
+        </td>
+        <td>
+          <label for="province"><b>State/Province*</b></label>   <br>
+          <select id="txtProvince"name="subject" id="subject"style="height: 34px;width: 250px;">
+            <option value="Select One" selected="selected">Select One</option>
+            <option value="" >Alberta</option>
+            <option value="">British Columbia</option>
+            <option value="">Manitoba</option>
+            <option value="" >Saskatchewan</option>             
+          </select>
+          <label id="divErrorProvince"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your address</label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="zip"><b>Postal Code*</b></label>   <br>
+          <input id="txtZip" type="text" placeholder="" name="" style="width: 250px" maxlength="6" minlength="6">
+          <label id="divErrorZip"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your postal</label>
+        </td>
+        <td>
+          <label for="country"><b>Country*</b></label>   <br>
+          <select id="txtCountry"name="subject" id="subject"style="height: 34px;width: 250px;">
+            <option value="Select One" selected="selected">Select One</option>
+            <option value="" >USA</option>
+            <option value="">Canada</option>                  
+          </select>
+          <label id="divErrorCountry"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your country</label>
+        </td>
+      </tr>      
+      <tr>
+        <td>
+          <label for="password"><b>Password*</b></label>   <br>
+          <input id="txtPassword1" type="password" placeholder="" name="password" style="width: 250px" minlength="8">
+          <label id="divErrorPassword1"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your password</label>
+          <label id="divErrorPassword4"style="display: none; color:red;font-size: 10px;font-style: italic;">Your password is weak</label>
+        </td>
+        <td>
+          <label for="confirm_password"><b>Confirm Password*</b></label>   <br>
+          <input id="txtPassword2" type="password" placeholder="" name="confirm_password" style="width: 250px"minlength="8">
+          <label id="divErrorPassword1"style="display: none; color:red;font-size: 10px;font-style: italic;">
+          Please enter your password</label>
+          <label id="divErrorPassword2"style="display: none; color:red;font-size: 10px;font-style: italic;">
+          Please confirm your password</label>         
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"style="text-align: center;"><label id="divErrorPassword3"style="display:none;color:red;font-size: 10px;font-style: italic;">The Confirm password should match Password</label>
+        </td>    
+      </tr>
+      <tr>
+        <td height="55" style=" font-size: 12px;" colspan="2">
+          <label>
+           <input id="Check1" type="checkbox" unchecked="" name="remember">&nbsp;&nbsp;<span style="color:red">I have read and agree to the</span><a href="#">Terms of Use</a> <span style="color:red;">and</span> <a href="#">Privacy Notice.</a><span style="color:red;">(Required)</span>
+           <label id="divErrorCheck"style="display: none;color:red;font-size: 10px;font-style: italic;">Check Box Required</label>
+         </label>
+       </td>
+     </tr>
+     <tr> 
+      <td style=" font-size: 12px;" colspan="2">
+        <label>
+         <input id="Check2" type="checkbox" unchecked="" name="remember">&nbsp;&nbsp;By checking this box, you agree to receive marketing emails from Ikea. You can unsubscribe at any time.
+       </label>         
+     </td> 
+   </tr>
+   <tr>
+    <td colspan="2">
+      <button onclick="fncValidate();" type="submit"style="width: 200px;background-color:#0099cc;border-radius:10px;color: white; text-align: center;margin-left: 210px;margin-top: 10px;margin-bottom: 10px;border: none;">Create Your Account</button>
+    </td>
+  </tr>
+
+</table></center>
+</div>
+<footer style="text-align: center;margin-top: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+  <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512Z"/>
+</svg>Ikea Sample Registration ,2023 Castro</footer>
+</body>
+</html>
