@@ -27,25 +27,14 @@
     body {background-color: lightgray}
   </style>
   <script>    
-    function fncCheck(email) {
-      console.log(email);
-      if(validateEmail(email) !=true){
-        document.getElementById("divErrorEmail").style.display="block";
-        document.getElementById("txtEmail").focus();
-      }
-      else{
-        document.getElementById("divErrorEmail").style.display="none"
-      }
-    }
-    function validateEmail(email) {
-      var re = /\S+@\S+\.\S+/;
-      return re.test(email);
-    }  
-     function validatePhone(phone) {
-        var cp = /^\+?([1-9]{2})\)?[-. ]?([1-9]{4})[-. ]?([1-9]{4})$/;
-        return cp.test(phone);
-  }  
-    function fncValidate(){
+    
+  
+      function validateEmail(email) {
+        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+  }
+
+      function fncValidate(){
       var FName=document.getElementById("txtFName").value;
       var LName=document.getElementById("txtLName").value;
       var RadioMale=document.getElementById("RadioMale").checked;;
@@ -88,7 +77,7 @@
       else{
         document.getElementById("divErrorRadio").style.display="none";
       }
-      if(Email=="" && validateEmail(Email) !=true){
+      if(Email==="" || !validateEmail(Email) ){
         document.getElementById("divErrorEmail").style.display="block";
         document.getElementById("txtEmail").focus();
         return false;
@@ -232,14 +221,14 @@
         </td> 
         <td>
           <label for="email"><b>Email*</b></label>   <br>
-          <input id="txtEmail"oninput="fncCheck(this.value);" type="text" placeholder="john.doe@gmail.com" name="email" style="width: 250px">
+          <input id="txtEmail" type="text" placeholder="john.doe@gmail.com" name="email" style="width: 250px">
           <label id="divErrorEmail"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your valid email</label>
         </td>              
       </tr>
       <tr>
         <td>
           <label for="dob"><b>Date of Birth*</b></label>   <br>
-          <input id="txtBirth" type="text" placeholder="" name="dob" style="width: 250px">
+          <input id="txtBirth" type="date" placeholder="" name="dob" style="width: 250px">
           <label id="divErrorBirth"style="display: none; color:red;font-size: 10px;font-style: italic;">Please enter your date of birth</label>
         </td>
         <td>            
