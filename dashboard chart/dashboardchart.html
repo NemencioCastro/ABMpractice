@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <title>Ikea JS-web-final exam</title>
+  <style>
+    body {
+      width: 100%;
+      background-color: white;
+    }
+    .header{
+      background-color: #849193;
+      height: 50px;
+    }
+    table,tr,th,td{
+      border:  px solid black;
+      position: ;
+    }
+    .circle {
+      height: 10px;
+      width: 10px;
+      background-color: #1F9A75;
+      border-radius: 50%;
+    }
+    .circle2 {
+      height: 10px;
+      width: 10px;
+      background-color: #F6E018;
+      border-radius: 50%;
+    }
+    .circle3 {
+      height: 10px;
+      width: 10px;
+      background-color: #F88D0F;
+      border-radius: 50%;
+    }
+    .progress {
+      background-color: #DEDEDE;
+      height: 10px;
+      x;
+    }
+      .vl {
+      border-left: 6px solid #1F9A75;
+      height: 25px;
+      font-size: 25px;
+      font-weight: bolder;
+      border: px solid black;
+      width: 45%;
+    }
+      .vl2 {
+      border-left: 6px solid #F88D0F;
+      height: 40px;
+      font-size: 25px;
+      font-weight: bolder;
+      float:right;      
+      border: px solid black;
+      width: 60%;
+    }
+     .vl3 {
+      border-left: 6px solid #F6E018;
+      height: 25px;
+      font-size: 25px;
+      font-weight: bolder;
+      border: px solid black;
+      width: 45%;
+    }
+    .vl4 {
+      border-left: 6px solid #395BD4;
+      height: 40px;
+      font-size: 25px;
+      font-weight: bolder;
+      float:right;      
+      border: px solid black;
+      width: 60%;
+    }
+
+  </style>
+  <script>
+    function chart(){
+      //barchart
+      var barColors = ["#1F9A75","#0C6931","#F88D0F","#B42C2C"];
+      var xValues = ["Active", "Draft", "Expired", "Cancelled"];
+      var yValues = [35, 70, 50, 12];        
+      new Chart("myChart", {
+        type: "bar",
+        data: {
+          labels: xValues,
+          datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+          }]
+        },
+        options: {
+          legend: {display: false},
+          title: {
+            display: true,
+            text: "Contract by Stages"
+          }
+        } 
+      });
+      //donut chart
+      var xValues2 = ["Within 60 days", "Within 30 days", "Expired"];
+      var yValues2 = [70, 50, 40];
+      var barColors2 = [
+        "#1F9A75",
+        "#F6E018",
+        "#F88D0F",
+        
+        ];
+
+      new Chart("myChart2", {
+        type: "doughnut",
+        data: {
+          labels: xValues2,
+          datasets: [{
+            backgroundColor: barColors2,
+            data: yValues2
+          }]
+        },
+        options: {
+          title: {
+            display: true,
+            text: "Contract Expiring"
+          }
+        }
+      });
+    }
+
+  </script>
+
+</head>
+<body onload="chart()">
+  <header>
+    <div class="header">
+    </div>    
+  </header>
+  <table style="width:100%">
+    <tr>
+      <td style="width:10%;border: 1px solid black;">
+        <table style="width:100%;">
+          <tr>
+            <td style="padding-top: 30px;">
+              <img src="images\logo.jpg" alt="abm" width="50px" height="50px"style="border-radius: px;;margin-top: px;margin-left: 30px;"> 
+            </td>          
+          </tr>
+          <tr>
+           <td style="padding-top: 70px;">
+            <img src="images\menu.jpg" alt="abm" width="40px" height="40px"style="border-radius: px;;margin-top: px;margin-left: 30px;">  
+          </td>
+        </tr>
+        <tr>
+         <td style="padding-top: 30px;">
+          <img src="images\user.jpg" alt="abm" width="40px" height="40px"style="border-radius: px;;margin-top: px;margin-left: 30px;">  
+        </td>
+      </tr>  
+      <tr>
+       <td style="padding-top: 30px;">
+        <img src="images\clock.jpg" alt="abm" width="40px" height="40px"style="border-radius: px;;margin-top: px;margin-left: 30px;">  
+      </td>
+    </tr> 
+    <tr>
+     <td style="padding-top: 30px;">
+      <img src="images\letter.jpg" alt="abm" width="40px" height="40px"style="border-radius: px;;margin-top: px;margin-left: 30px;">  
+    </td>
+  </tr>
+  <tr>
+   <td style="padding-top: 30px;">
+    <img src="images\key.jpg" alt="abm" width="40px" height="40px"style="border-radius: px;;margin-top: px;margin-left: 30px;">  
+  </td>
+</tr>
+<tr>
+  <td style="padding-top: 80px;padding-bottom: 30px;">
+    <img src="images\girl.jpg" alt="abm" width="50px" height="50px"style="border-radius: px;;margin-top: px;margin-left: 30px;border-radius: 50px;">  
+  </td>
+</tr>                                                                                                                               
+</table>
+</td>
+<td style="width:65%;border: 1px solid black;">
+  <table style="width:100%;margin-top:10px;">
+    <tr style="line-height: 20px;">
+      <th style="padding-bottom: 30px;font-size: 24px;font-weight: bolder;height: 30px;padding-left: 20px;" colspan="3">
+        Dashboard
+      </th>          
+    </tr>
+    <tr>
+     <td style="padding-bottom: 10px;padding-left: 30px;width: 33.33%;;">
+      <div class="circle" style="margin-top: 10px;"><span style="padding-left: 15px;line-height: 20px;">Accepted</span></div>
+    </td>
+    <td style="padding-bottom: 10px;padding-left: 30px;width: 33.33%;">
+      <div class="circle2" style="margin-top: 10px;"><span style="padding-left: 15px; position: absolute;">In Contract</span></div>
+    </td>
+    <td style="padding-bottom: 10px;padding-left: 30px;width: 33.33%;">
+      <div class="circle3" style="margin-top: 10px;"><span style="padding-left: 15px;position: absolute;">In Approval</span></div>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding-left:30px;font-size: 26px;font-weight: bolder;width: 33.33%;">
+      2,340
+    </td>
+    <td style="padding-left:30px;font-size: 26px;font-weight: bolder;width: 33.33%;">
+      1,782
+    </td>
+    <td style="padding-left:30px;font-size: 26px;font-weight: bolder;width: 33.33%;">
+      1,596
+    </td>
+  </tr>  
+  <tr>
+    <td style="padding-left: 30px;font-size: 22;font-weight: bolder;padding-top: 20px;position: absolute;width: 40%;"colspan="">
+      <canvas id="myChart" style="width:100%;max-width:500px;height: 200px"></canvas>
+    </td>
+    <td style="padding-left: 20px;font-size: 22;font-weight: bolder;padding-top: 20px;margin-left: 450px;position: absolute;width: 40%;" colspan="2">
+      <canvas id="myChart2" style="width:100%;max-width:700px;height: 230px;float: right;"></canvas>
+    </td>   
+  </tr> 
+ <tr>
+  <td style="padding-top:300px;padding-bottom: ;padding-left: 30px;"colspan="3">
+    <table style="width:100%;border: px solid black;">
+      <tr>
+        <th>
+          My Contracts
+        </th>
+      </tr>
+      <tr>
+        <td style="color: #849193; padding-top: 10px;width: 20%;font-size: 12px;">
+          SERIAL #
+        </td>
+        <td style="color: #849193; padding-top: 10px;width: 40%;font-size: 12px">
+          NAME
+        </td>
+        <td style="color: #849193; padding-top: 10px;width: 20;font-size: 12px">
+          VALUE
+        </td>
+        <td style="color: #849193; padding-top: 10px;width: 20;font-size: 12px">
+          STATUS
+        </td>
+      </tr>
+      <tr>
+        <td style="color: #849193; padding-top: 10px;width: 20%;font-size: 12px;">
+          CNTR000839F
+        </td>
+        <td style="padding-top: 10px;width: 40%;font-size: 12px;font-weight: bold;">
+          Horizon Tech
+        </td>
+        <td style=" padding-top: 10px;width: 20;font-size: 12px;font-weight: bold;">
+          $48,292
+        </td>
+        <td style="color:white; padding-top: 10px;width: 20;font-size: 12px">
+          <button style="background-color: #1F9A75;border: none;border-radius: 5px;height: 25px;width: 50px;">Active</button>
+        </td>
+      </tr>
+      <tr>
+        <td style="color: #849193; padding-top: 10px;width: 20%;font-size: 12px;">
+          CNTR000839F
+        </td>
+        <td style="padding-top: 10px;width: 40%;font-size: 12px;font-weight: bold;">
+          Flowtech Labs
+        </td>
+        <td style=" padding-top: 10px;width: 20;font-size: 12px;font-weight: bold;">
+          $20,550
+        </td>
+        <td style="color:white; padding-top: 10px;width: 20;font-size: 12px">
+          <button style="background-color: #F88D0F;border: none;border-radius: 5px;height: 25px;width: 50px;">Draft</button>
+        </td>
+      </tr>
+      <tr>
+        <td style="color: #849193; padding-top: 10px;width: 20%;font-size: 12px;">
+          CNTR000839F
+        </td>
+        <td style="padding-top: 10px;width: 40%;font-size: 12px;font-weight: bold;">
+          ServerTech INC.                                
+        </td>
+        <td style=" padding-top: 10px;width: 20;font-size: 12px;font-weight: bold;">
+          $72,402
+        </td>
+        <td style="color:white; padding-top: 10px;width: 20;font-size: 12px">
+          <button style="background-color: #395BD4;border: none;border-radius: 5px;height: 25px;width: 70px;">In Review</button>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>                                                                                                                               
+</table>
+</td>
+<td style="width: 25%;border: 1px solid black;">
+  <table style="width:70%;margin-left: 50px;margin-top:-50px;position: ;">
+    <tr>
+      <th style=" padding-right: 20px;" colspan="2">
+        Contract by Type
+      </th>
+    </tr>
+    <tr>
+      <td style="padding-top:20px" colspan="2">
+        NDA<span style="float: right;">70%</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="progress" style="line-height:20px;" colspan="2">        
+        <label class="progress-bar bg-success" role="progressbar" style="width: 70%;background-color: #1F9A75;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" colspan="2"></label>
+      </td>        
+    </tr>
+    <tr>
+      <td colspan="2">
+        Insurance<span style="float: right;">25%</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="progress" colspan="2">        
+        <label class="progress-bar bg-success" role="progressbar" style="width: 25%;background-color: #F88D0F;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" colspan="2"></label>
+      </td>        
+    </tr>
+    <tr>
+      <td colspan="2">
+        Lease<span style="float: right;">50%</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="progress" colspan="2">        
+        <label class="progress-bar bg-success" role="progressbar" style="width: 50%;background-color: #F6E018;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" colspan="2"></label>
+      </td>        
+    </tr>
+    <tr>
+      <td colspan="2">
+        Maintenace<span style="float: right;">65%</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="progress"colspan="2">        
+        <label class="progress-bar bg-success" role="progressbar" style="width: 65%;background-color: #0C6931;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" colspan="2"></label>
+      </td>        
+    </tr>
+    <tr>
+      <td colspan="2">
+        Purchase Agreement<span style="float: right;">12%</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="progress" colspan="2">        
+        <label class="progress-bar bg-success" role="progressbar" style="width: 12%;background-color: #B42C2C;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" colspan="2"></label>
+      </td>        
+    </tr>
+    <tr>
+      <td colspan="2">
+        Sale<span style="float: right;">10%</span>
+      </td>
+    </tr>
+    <tr>
+      <td class="progress" colspan="2">        
+        <label class="progress-bar bg-success" role="progressbar" style="width: 10%;background-color: #395BD4;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" colspan="2"></label>
+      </td>        
+    </tr>
+     <tr>
+      <th style="padding-top:100px;padding-bottom: 20px;">
+        Average Cycle Time
+      </th>
+    </tr>
+    <tr>
+      <td class="vl">
+        <span style="padding-left:10px">25</span><span style="font-size: 12px;padding-left: 5px;color: #849193;">days</span>
+      </td>
+      <td class="vl2">
+        <span style="padding-left:10px">25</span><span style="font-size: 12px;padding-left: 5px;color: #849193;">days</span>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding-left: 15px;">
+        NDA
+      </td>
+      <td style="padding-left: 70px;">
+        Insurance
+      </td>
+    </tr>
+    <tr>
+      <td class="vl3">
+        <span style="padding-left:10px">25</span><span style="font-size: 12px;padding-left: 5px;color: #849193;">days</span>
+      </td>
+      <td class="vl4">
+        <span style="padding-left:10px">25</span><span style="font-size: 12px;padding-left: 5px;color: #849193;">days</span>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding-left: 15px;">
+        Lease
+      </td>
+      <td style="padding-left: 70px;">
+        Purchase
+      </td>
+    </tr>
+  </table>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
